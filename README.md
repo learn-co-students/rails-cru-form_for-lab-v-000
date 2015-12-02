@@ -15,3 +15,5 @@ all of them just have a single property, name (hmm, maybe we can figure out more
 we've given no code.
 
 Interlink between pages using route helpers (show should link to edit, index should link to new and show).
+
+<a href='https://learn.co/lessons/rails-cru-form_for-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
