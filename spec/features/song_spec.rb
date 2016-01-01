@@ -8,18 +8,13 @@ describe 'navigate' do
   end
 
   it 'shows the name on the show page in a h1 tag' do
-    visit "/songs/#{@song.id}"
+    visit song_path(@song.id)
     expect(page).to have_css("h1", text: "My Song")
   end
 
   it 'to song pages' do
-    visit "/songs/#{@song.id}"
+    visit song_path(@song.id)
     expect(page.status_code).to eq(200)
-  end
-
-  it 'shows the bio on the show page in a p tag' do
-    visit "/songs/#{@song.id}"
-    expect(page).to have_css("p", text: "My song bio")
   end
 end
 
@@ -32,9 +27,9 @@ describe 'form' do
   it 'shows a new form that submits content and redirects and prints out params' do
     visit new_song_path
 
-    fill_in 'name', with: "My song name"
-    fill_in 'artist_id', with: @artist.id
-    fill_in 'genre_id', with: @genre.id
+    fill_in 'song[name]', with: "My song name"
+    fill_in 'song[artist_id]', with: @artist.id
+    fill_in 'song[genre_id]', with: @genre.id
 
     click_on "Create Song"
 
@@ -47,8 +42,8 @@ describe 'form' do
     visit edit_song_path(@song)
 
     fill_in 'song[name]', with: "My edit"
-    fill_in 'artist_id', with: @artist.id
-    fill_in 'genre_id', with: @genre.id
+    fill_in 'song[artist_id]', with: @artist.id
+    fill_in 'song[genre_id]', with: @genre.id
 
     click_on "Update Song"
 
@@ -65,11 +60,11 @@ describe 'index' do
 
   it 'links to the genre page' do
     visit songs_path
-    expect(page).to have_link(@genre.name, href: genre_path(@genre)
+    expect(page).to have_link(@genre.name, href: genre_path(@genre))
   end
 
   it 'links to the artist page' do
     visit songs_path
-    expect(page).to have_link(@artist.name, href: artist_path(@artist)
+    expect(page).to have_link(@artist.name, href: artist_path(@artist))
   end
 end
