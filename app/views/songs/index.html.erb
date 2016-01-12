@@ -1,0 +1,7 @@
+<% @songs.each do |s| %>
+  <div>
+    Genre: <%= link_to s.genre.name, genre_path(s) %>
+    Artist: <%= link_to s.artist.name, artist_path(s)%>
+  </div>
+<% end %>
+
