@@ -60,6 +60,7 @@ describe 'index' do
 
   it 'links to the genre page' do
     visit songs_path
+    puts page.body
     expect(page).to have_link(@genre.name, href: genre_path(@genre))
   end
 
