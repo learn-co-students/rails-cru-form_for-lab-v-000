@@ -1,0 +1,7 @@
+<% Artist.all.each do |artist| do %>
+	<%= link_to(artist_path(artist), artist.name) %>
+<%end%>
+
+<%Genre.all.each do |genre| do %> 
+	<%= link_to(genre_path(genre), genre.name) %>
+<%end%>
