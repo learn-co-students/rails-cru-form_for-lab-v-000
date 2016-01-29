@@ -5,7 +5,7 @@
 1. Build RESTful actions for index, show, new, create, edit, update
 2. Use form_for for all forms (no need to share forms or partials)
 3. Correctly redirect when needed
-4. Interlink between pages using route helpers 
+4. Interlink between pages using route helpers
 
 ## Instructions
 
@@ -32,7 +32,7 @@ The tests are in the `spec/features` directory for each model. You will need to 
 
 The database tables should look like this:
 
-```
+```db
 table "artists"
   string   "name"
   text     "bio"
@@ -54,4 +54,4 @@ table "songs"
 
 * You can use the `resource`, `model`, `migration`, and `controller` generators, but do not use the `scaffold` generator
 
-<a href='https://learn.co/lessons/rails-cru-form_for-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-cru-form_for-lab' title='CRU with form_for Lab'>CRU with form_for Lab</a> on Learn.co and start learning to code for free.</p>
