@@ -5,10 +5,10 @@
   <%= f.text_field :name %><br/>
 
   <%= f.label :artist_id, "Artist" %>
-  <%= f.collection_select :artist_id, Artist.all, :id, :name %><br/>
+  <%= f.collection_select :artist_id, @artists, :id, :name %><br/>
 
   <%= f.label :genre_id, "Genre" %>
-  <%= f.collection_select :genre_id, Genre.all, :id, :name %><br/>
+  <%= f.collection_select :genre_id, @genres, :id, :name %><br/>
 
   <%= f.submit %>
 <% end %>
