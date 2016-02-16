@@ -33,7 +33,7 @@ describe 'form' do
     expect(page).to have_content("My artist name")
   end
 
-  it 'shows a new form that submits content and redirects and prints out params' do
+  it 'shows an edit form that submits content and redirects and prints out params' do
     @artist = Artist.create(name: "My Artist", bio: "My artist bio")
 
     visit edit_artist_path(@artist)
