@@ -1,0 +1,71 @@
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+[33m
+  1) ArtistsHelper add some examples to (or delete) /Users/Nick/Development/rails-cru-form_for-lab-v-000/spec/helpers/artists_helper_spec.rb[0m
+     [36m# Not yet implemented[0m
+[36m     # ./spec/helpers/artists_helper_spec.rb:14
+[0m[33m
+  2) GenresHelper add some examples to (or delete) /Users/Nick/Development/rails-cru-form_for-lab-v-000/spec/helpers/genres_helper_spec.rb[0m
+     [36m# Not yet implemented[0m
+[36m     # ./spec/helpers/genres_helper_spec.rb:14
+[0m[33m
+  3) SongsHelper add some examples to (or delete) /Users/Nick/Development/rails-cru-form_for-lab-v-000/spec/helpers/songs_helper_spec.rb[0m
+     [36m# Not yet implemented[0m
+[36m     # ./spec/helpers/songs_helper_spec.rb:14
+[0m[33m
+  4) Artist add some examples to (or delete) /Users/Nick/Development/rails-cru-form_for-lab-v-000/spec/models/artist_spec.rb[0m
+     [36m# Not yet implemented[0m
+[36m     # ./spec/models/artist_spec.rb:4
+[0m[33m
+  5) Genre add some examples to (or delete) /Users/Nick/Development/rails-cru-form_for-lab-v-000/spec/models/genre_spec.rb[0m
+     [36m# Not yet implemented[0m
+[36m     # ./spec/models/genre_spec.rb:4
+[0m[33m
+  6) Song add some examples to (or delete) /Users/Nick/Development/rails-cru-form_for-lab-v-000/spec/models/song_spec.rb[0m
+     [36m# Not yet implemented[0m
+[36m     # ./spec/models/song_spec.rb:4
+[0m
+
+Failures:
+
+  1) form shows a new form that submits content and redirects and prints out params
+     [31mFailure/Error: fill_in 'song[name]', with: "My song name"[0m
+     [31m[0m
+     [31mCapybara::ElementNotFound:[0m
+     [31m  Unable to find field "song[name]"[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/node/finders.rb:43:in `block in find'[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/node/base.rb:84:in `synchronize'[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/node/finders.rb:32:in `find'[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/node/actions.rb:58:in `fill_in'[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/session.rb:698:in `block (2 levels) in <class:Session>'[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'[0m
+     [36m# ./spec/features/song_spec.rb:42:in `block (2 levels) in <top (required)>'[0m
+
+  2) form shows a new form that submits content and redirects and prints out params
+     [31mFailure/Error: fill_in 'song[name]', with: "My edit"[0m
+     [31m[0m
+     [31mCapybara::ElementNotFound:[0m
+     [31m  Unable to find field "song[name]"[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/node/finders.rb:43:in `block in find'[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/node/base.rb:84:in `synchronize'[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/node/finders.rb:32:in `find'[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/node/actions.rb:58:in `fill_in'[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/session.rb:698:in `block (2 levels) in <class:Session>'[0m
+     [36m# /Users/Nick/.rvm/gems/ruby-2.2.3/gems/capybara-2.5.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'[0m
+     [36m# ./spec/features/song_spec.rb:56:in `block (2 levels) in <top (required)>'[0m
+
+  3) index displays the song name
+     [31mFailure/Error: expect(page).to have_css("p", text: "My Song")[0m
+     [31m  expected to find css "p" with text "My Song" but there were no matches[0m
+     [36m# ./spec/features/song_spec.rb:75:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 1.12 seconds (files took 2.96 seconds to load)
+[31m22 examples, 3 failures, 6 pending[0m
+
+Failed examples:
+
+[31mrspec ./spec/features/song_spec.rb:39[0m [36m# form shows a new form that submits content and redirects and prints out params[0m
+[31mrspec ./spec/features/song_spec.rb:51[0m [36m# form shows a new form that submits content and redirects and prints out params[0m
+[31mrspec ./spec/features/song_spec.rb:73[0m [36m# index displays the song name[0m
+
