@@ -34,4 +34,7 @@ ActiveRecord::Schema.define(version: 20160312172204) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "songs", ["artist_id"], name: "index_songs_on_artist_id"
+  add_index "songs", ["genre_id"], name: "index_songs_on_genre_id"
+
 end
