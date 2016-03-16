@@ -1,3 +1,5 @@
 class Song < ActiveRecord::Base
-    validates_presence_of :name
+    validates :name, presence: true, uniqueness: true
+    belongs_to :genre 
+    belongs_to :artist
 end

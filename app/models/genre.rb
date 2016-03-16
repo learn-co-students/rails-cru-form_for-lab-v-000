@@ -1,3 +1,4 @@
 class Genre < ActiveRecord::Base
-    validates_presence_of :name
+  validates :name, presence: true, uniqueness: true
+  has_many :songs
 end
