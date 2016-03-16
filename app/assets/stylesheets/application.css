@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+html, body { margin: 0; padding: 0;}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.main-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-menu li {
+  display: inline-block;
+  padding: 10px 15px 10px 0;
+}
+
+.main-menu a {
+  text-decoration: none;
+}
