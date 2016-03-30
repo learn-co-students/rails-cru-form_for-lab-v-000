@@ -37,6 +37,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'tzinfo-data', platform: [:mingw, :mswin, :x64_mingw]
+  gem 'pry'
 end
 
 group :development do
