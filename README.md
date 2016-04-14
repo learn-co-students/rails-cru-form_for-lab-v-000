@@ -28,7 +28,7 @@ The data relationship will look something like this:
 * An artist has many songs
 
 
-The tests are in the `spec/features` directory for each model. You will need to build in the ability to `create`, `update`, and `show` for each model. And for the song `index` page you need to have it display each of the song's genre and artist, and link to the respective genre and artist `show` pages.
+The tests are in the `spec/features` directory for each model. You will need to build in the ability to `create`, `update`, and `show` for each model. And for the song `show` page you need to have it display each of the song's genre and artist, and link to the respective genre and artist `show` pages.
 
 The database tables should look like this:
 
@@ -55,3 +55,5 @@ table "songs"
 * You can use the `resource`, `model`, `migration`, and `controller` generators, but do not use the `scaffold` generator
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-cru-form_for-lab' title='CRU with form_for Lab'>CRU with form_for Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-cru-form_for-lab'>CRU Rails Lab </a> on Learn.co and start learning to code for free.</p>
