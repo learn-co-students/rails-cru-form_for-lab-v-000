@@ -25,8 +25,8 @@ describe 'form' do
   it 'shows a new form that submits content and redirects and prints out params' do
     visit new_artist_path
 
-    fill_in 'artist[name]', with: "My artist name"
-    fill_in 'artist[bio]', with: "My artist bio"
+    fill_in 'artist_name', with: "My artist name"
+    fill_in 'artist_bio', with: "My artist bio"
 
     click_on "Create Artist"
 
@@ -38,8 +38,8 @@ describe 'form' do
 
     visit edit_artist_path(@artist)
 
-    fill_in 'artist[name]', with: "My edit"
-    fill_in 'artist[bio]', with: "My artist bio"
+    fill_in 'artist_name', with: "My edit"
+    fill_in 'artist_bio', with: "My artist bio"
 
     click_on "Update Artist"
 
