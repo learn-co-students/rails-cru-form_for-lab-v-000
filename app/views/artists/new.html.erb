@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <%= form_for(@artist) do |t| %>
+  <label>Name:</label><br>
+  <%= t.text_field :name %><br>
+  <label>Bio: </label><br>
+  <%= t.text_area :bio %><br>
+  <%= t.submit %>
+  <% end %>
+</body>
+</html>
