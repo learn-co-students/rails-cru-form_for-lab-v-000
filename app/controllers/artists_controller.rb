@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   def show
-    @artist = Artist.find(params.require(:id))
+    @artist = Artist.find(params_id)
   end
 
   def new
@@ -16,11 +16,11 @@ class ArtistsController < ApplicationController
   end
 
   def edit
-    @artist = Artist.find(params.require(:id))
+    @artist = Artist.find(params_id)
   end
 
   def update
-    @artist = Artist.find(params.require(:id))
+    @artist = Artist.find(params_id)
     if @artist.update(artist_params)
       redirect_to artist_path(@artist)
     else
@@ -36,5 +36,9 @@ class ArtistsController < ApplicationController
 
     def artist_params
       params.require(:artist).permit(:name, :bio)
+    end
+
+    def params_id
+      params.require(:id)
     end
 end
