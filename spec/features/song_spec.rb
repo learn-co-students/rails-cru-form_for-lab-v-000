@@ -42,7 +42,8 @@ describe 'form' do
     fill_in 'song[name]', with: "My song name"
     fill_in 'song[artist_id]', with: @artist.id
     fill_in 'song[genre_id]', with: @genre.id
-
+    binding.pry
+    save_and_open_page
     click_on "Create Song"
 
     expect(page).to have_content("My song name")
