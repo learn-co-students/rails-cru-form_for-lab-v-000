@@ -1,0 +1,10 @@
+<h1>Index</h1>
+
+<% @songs.each do |a| %>
+  <ul>
+  <li><ul><%= link_to a.name, song_path(a)%>
+    <li><%= link_to Artist.find(a.artist_id).name, artist_path(Artist.find(a.artist_id)) %></li>
+    <li><%= link_to Genre.find(a.genre_id).name, genre_path(Genre.find(a.genre_id)) %></li>
+    </ul></li>
+  </ul>
+<% end %>
