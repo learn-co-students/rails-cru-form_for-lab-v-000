@@ -1,12 +1,5 @@
-<%= link_to 'genres_path', genres_path %>
-<%= form_for @genres do |f| %>
-
-<p>
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
-</p>
-
-<p>
-  <%= f.submit %>
-</p>
+<%= form_for(@genre) do |t| %>
+<label>Name:</label><br>
+<%= t.text_field :name %>
+<%= t.submit %>
 <% end %>

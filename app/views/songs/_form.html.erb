@@ -1,22 +1,12 @@
-<%= link_to 'songs_path', songs_path %>
-<%= form_for @songs do |f| %>
+<%= form_for(@song) do |f| %>
+  <label>Song Name:</label><br>
+  <%= f.text_field :name %><br>
 
-<p>
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
-</p>
+  <label>Genre</label><br>
+  <%= f.number_field :genre_id%>
 
-<p>
-  <%= f.label :artist_id %><br>
-  <%= f.text_field :artist_id %>
-</p>
+  <label>Artist</label><br>
+  <%= f.number_field :artist_id%>
 
-<p>
-  <%= f.label :genre_id %><br>
-  <%= f.text_field :genre_id %>
-</p>
-
-<p>
   <%= f.submit %>
-</p>
 <% end %>
