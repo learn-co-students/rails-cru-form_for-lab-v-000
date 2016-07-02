@@ -12,7 +12,7 @@ class GenresController < ApplicationController
 
   def show
     @genre = Genre.find(params[:id])
-    # render '/genres/show.html'
+     # render '/genres/show.html'
   end
 
   def create
