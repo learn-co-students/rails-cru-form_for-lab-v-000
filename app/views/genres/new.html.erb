@@ -1,0 +1,8 @@
+<h1>Create a Genre</h1>
+
+<%= form_for(@genre) do |g| %>
+<lable>Genre Name: </lable>
+  <%= g.text_field :name %>
+  <%= g.submit %>
+<% end %>
+<%= link_to "All Genres", genres_path %>
