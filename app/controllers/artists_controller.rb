@@ -14,12 +14,12 @@ class ArtistsController < ApplicationController
   end
 
   def edit
-    @genre = Genre.find(params[:id])
+    @artist = Artist.find(params[:id])
   end
 
   def update
     @artist = Artist.find(params[:id])
-    @artist.update(params.require(:artist))
+    @artist.update(get_params(:name, :artist_id, :genre_id))
     redirect_to artist_path(@artist)
   end
 
