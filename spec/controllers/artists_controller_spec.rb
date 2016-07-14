@@ -1,5 +1,5 @@
-require 'rails_helper'
+# require 'rails_helper'
 
-RSpec.describe ArtistsController, type: :controller do
+# RSpec.describe ArtistsController, type: :controller do
 
-end
+# end
