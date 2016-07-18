@@ -1,0 +1,14 @@
+{
+  "name": "myapp",
+  "description": "Dummy app to go along the dokku tutorial found on rubyfleebie.com",
+  "keywords": [
+    "dokku",
+    "rails",
+    "rubyfleebie.com"
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
