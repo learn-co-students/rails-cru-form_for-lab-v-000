@@ -1,3 +1,0 @@
-module ArtistsHelper
- 
-end
