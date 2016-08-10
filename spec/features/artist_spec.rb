@@ -30,7 +30,7 @@ describe 'form' do
 
     click_on "Create Artist"
 
-    expect(page).to have_content("My artist name")
+     expect(page).to have_content("My artist name")
   end
 
   it 'shows an edit form that submits content, redirects and prints out params' do
