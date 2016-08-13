@@ -1,0 +1,6 @@
+<h1><%= @artist.to_s %></h1>
+<p>
+  <%= @artist.bio %>
+</p>
+<%= button_to "Edit this Artist", edit_artist_path, :method => "get" %>
+<%= button_to "Back to all Artists", artists_path, :method => "get" %>
