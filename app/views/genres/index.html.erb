@@ -1,0 +1,9 @@
+<div>
+  <% @genres.each do |genre| %>
+    <div class="">
+      <%= link_to genre.to_s, genre_path(genre) %>
+    </div>
+  <% end %>
+</div>
+
+<%= button_to "Create a new Genre", new_genre_path, :method => "get" %>
