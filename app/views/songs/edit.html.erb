@@ -1,0 +1,13 @@
+<%= form_for(@song) do |a| %>
+  
+  <label>Song Name:</label><br>
+  
+  <%= a.number_field :name %><br>
+
+  <label>Song Genre</label><br>
+  <%= a.number_field :genre_id %><br>
+
+ <label>Song Artist</label><br>
+  <%= a.text_field :artist_id %><br>
+  <%= a.submit %>
+<% end %>
