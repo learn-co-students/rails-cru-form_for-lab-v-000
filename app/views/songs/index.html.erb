@@ -1,0 +1,5 @@
+<% @songs.each do |song| %>
+  <%= div_for(song, class: "song-index-page") do %>
+    <p><%= link_to song.name, song_path(song) %></p>
+  <% end %>
+<% end %>
