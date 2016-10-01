@@ -1,0 +1,12 @@
+<h1>Artists:</h1>
+
+<% @artists.each do |artist| %>
+
+  <h1><%=artist.name%></h1><br>
+
+  <h3><%=artist.bio%></h3>
+
+  <% end %>
+
+
+  <%=link_to("Create New Artist", new_artist_url)%>
