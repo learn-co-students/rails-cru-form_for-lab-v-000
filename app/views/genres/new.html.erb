@@ -1,0 +1,11 @@
+<%= form_for :genre do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :bio %>
+  <%= f.text_area :bio %>
+
+  <%= f.submit "Create Genre" %>
+
+<% end %>
