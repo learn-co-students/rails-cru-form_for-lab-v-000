@@ -1,0 +1,13 @@
+<ul>
+  <% Artist.all.each do |artist| %>
+  <li>
+    <p>
+       <%= artist.name %>
+    </p>
+    <p>
+      <%= artist.bio %>
+    </p>
+  </li>
+
+  <% end %>
+</ul>
