@@ -23,7 +23,11 @@ Rails.application.routes.draw do
 
   post 'artists', to: 'artist#create'
 
-  get 'artists', to: 'artist#index'
+  get 'edit/artist', to: 'artist#edit'
+
+  put 'artist/:id', to: 'artists#update'
+
+  #get 'artists', to: 'artist#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
