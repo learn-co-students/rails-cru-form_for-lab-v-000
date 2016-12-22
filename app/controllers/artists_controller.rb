@@ -18,7 +18,7 @@ class ArtistsController < ApplicationController
 	end
 
 	def edit
-		@song = Artist.find(params[:id])
+		@artist = Artist.find(params[:id])
 	end
 
 	def update
