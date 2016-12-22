@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Genre, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do
+    Genre.create(:name => 'Classical')
+  end
+
+  it 'can create a new genre' do
+    expect(Genre.last.name).to eq("Classical")
+  end
 end
