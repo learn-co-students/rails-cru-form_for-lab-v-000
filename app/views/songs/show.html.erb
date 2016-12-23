@@ -1,5 +1,4 @@
-<h1>Song#show</h1>
-<p>Find me in app/views/song/show.html.erb</p>
-<h1><%= @song.name %></h1>
-<a href=<%= genre_path(@genre.id) %>><%= @genre.name %></a>
-<a href=<%= artist_path(@artist.id) %>><%= @artist.name %></a>
+<h1><%= link_to @song.name, songs_path(@song.id) %></h1>
+<h3>Song: <%= link_to @artist.name, artists_path(@artist.id) %><br>
+Genre: <%= link_to @genre.name, genres_path(@genre.id) %></h3>
+<%= link_to "Songs Home", songs_path %>
