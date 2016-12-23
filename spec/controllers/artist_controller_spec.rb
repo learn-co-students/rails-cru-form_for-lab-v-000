@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe ArtistController, type: :controller do
+RSpec.describe ArtistsController, type: :controller do
 
-  describe "GET #create" do
+  describe "GET #new" do
     it "returns http success" do
-      get :create
+      get :new
       expect(response).to have_http_status(:success)
     end
   end
