@@ -1,0 +1,6 @@
+<h1>Genre List</h1>
+  <% @genres.each do |g| %>
+    <h3>Name: <%= link_to g.name, "/genres/#{g.id}/edit" %><br></h3>
+  <% end %>
+<%= link_to "Create new genre", "/genres/new" %><br>
+<%= link_to "Home Page", "/" %>

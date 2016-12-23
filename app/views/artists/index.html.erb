@@ -1,0 +1,7 @@
+<h1>Artist List</h1>
+  <% @artists.each do |a| %>
+    <h3>Name: <%= link_to a.name, "/artists/edit/#{a.id}" %><br></h3>
+    <p>Biography: <%= a.bio %></p><br>
+  <% end %>
+<%= link_to "Create new artist", "/artists/new" %><br>
+<%= link_to "Home Page", "/" %>
