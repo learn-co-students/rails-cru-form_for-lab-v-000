@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :genres, only: [:new, :show]
+  resources :genres, only: [:new, :show, :edit, :update]
 
   post '/genres/new', to: 'genres#create'
 
-  resources :songs, only: [:new, :show, :index]
+  resources :songs, only: [:new, :show, :index, :edit, :update]
 
   post '/songs/new', to: 'songs#create'
 
-  resources :artists, only: [:new, :show]
+  resources :artists, only: [:new, :show, :edit, :update]
 
   post '/artists/new', to: 'artists#create'
 
