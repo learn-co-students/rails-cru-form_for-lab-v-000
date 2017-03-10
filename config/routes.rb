@@ -53,4 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resources :songs, only: [:new, :index, :create, :show, :edit, :update]
+  resources :genres, only: [:new, :index, :create, :show, :edit, :update]
+  resources :artists, only: [:new, :index, :create, :show, :edit, :update]
 end
