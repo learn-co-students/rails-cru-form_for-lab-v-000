@@ -1,0 +1,4 @@
+<% Artist.all.each do |artist| %>
+  <div><%= Artist.title %></div>
+  <div><%= Artist.bio %></div>
+<% end %>
