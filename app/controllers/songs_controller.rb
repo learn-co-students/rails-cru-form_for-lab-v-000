@@ -32,4 +32,9 @@ class SongsController < ApplicationController
   		def song_params
   			params.require(:song).permit(:name, :artist_id, :genre_id)
   		end
+
+
+    # def student_params(*args)
+    #   params.require(:student).permit(*args)
+    # end
 end
