@@ -1,0 +1,9 @@
+edit.html.erb
+
+<%= form_for(@artist) do |f| %>
+	<%= f.label :name %><br>
+  <%= f.text_field :name, value: @artist.name%><br>
+  <%= f.label :bio %><br>
+  <%= f.text_area :bio, value: @artist.bio %><br>
+  <%= f.submit %>
+ <% end %>
