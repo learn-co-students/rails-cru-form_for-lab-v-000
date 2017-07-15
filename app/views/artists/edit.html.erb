@@ -1,0 +1,11 @@
+<h1>Edit Artist</h1>
+<%= form_for(@artist)      { |form| %>
+
+<%= label(:name, "Name") %>
+<%=form.text_field(:name, :id => "artist[name]")%><br>
+
+<%= label(:bio, "Bio") %>
+<%=form.text_area(:bio, :id => "artist[bio]")%><br>
+
+<%= form.submit%>
+<% } %>
