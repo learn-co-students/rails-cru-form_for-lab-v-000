@@ -1,0 +1,7 @@
+<h1><%= @genre.name %></h1>
+  <dl>
+    <dt>Songs</dt>
+      <% @genre.songs.each do |song| %>
+        <dd><%= link_to(song.name, song_path(song)) %></dd>
+      <% end %>
+  </dl>
