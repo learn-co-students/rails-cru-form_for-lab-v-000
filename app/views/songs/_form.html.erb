@@ -1,0 +1,12 @@
+<%= form_for @song do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :name %>
+  <%= f.number_field :artist_id %>
+  <br>
+  <%= f.label :name %>
+  <%= f.number_field :genre_id %>
+  <br>
+  <%= f.submit yield(:button_text) %>
+<% end %>
