@@ -4,13 +4,12 @@
   <%= f.text_field :name %><br>
 
 
-  <% @artists.each do |artist| %>
-  <%= f.label :artist.name%>
-  <%= f.radio_button :artist_id %>
-  <% end %>
+  <%= f.label :'artist id'%>
+  <%= f.number_field :artist_id %>
 
-  <%= f.label :'song genre'%>
-  <%= f.text_field :name %>
+
+  <%= f.label :'genre id'%>
+  <%= f.number_field :genre_id %>
 
   <%= f.submit "Create Song" %>
 <% end %>
