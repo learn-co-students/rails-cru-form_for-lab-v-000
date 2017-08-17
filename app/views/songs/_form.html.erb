@@ -1,0 +1,6 @@
+<%= form_for(song) do |f| %>
+  Song Name: <%= f.text_field :name %><br><br>
+  Artist Id: <%= f.text_field :artist_id %><br><br>
+  Genre Id: <%= f.text_field :genre_id %><br><br>
+  <%= yield f %>
+<% end %>
