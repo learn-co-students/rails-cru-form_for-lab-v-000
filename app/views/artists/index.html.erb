@@ -2,7 +2,7 @@
 <% @artists.each do |artist|%>
   <div>
     <ul>
-      <li><%= artist.name %></li>
+      <li><%= link_to artist.name, artist_path(artist) %></li>
       <li><%= artist.bio %></li>
     </ul>
   </div>
