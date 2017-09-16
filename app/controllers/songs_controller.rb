@@ -10,7 +10,9 @@ class SongsController < ApplicationController
     render '/songs/new.html'
   end
 
-  def show
+	def show
+# binding.pry
+
     @song = Song.find(params[:id])
   end
   
