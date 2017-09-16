@@ -11,5 +11,22 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe GenresHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+#  pending "add some examples to (or delete) #{__FILE__}"
+
+  describe "#genre_name" do
+
+    context "when the genre is present" do
+      it "returns the genre's name" do
+        @genre = Genre.create(name: "pop")
+        expect(helper.genre_name(@genre)).to eq("pop")
+      end
+    end
+    context "when the genre doesn;t exist" do
+      it "returns nil" do
+        @genre = nil
+        expect(helper.genre_name(@genre)).to eq(nil)
+      end
+    end
+
+  end
 end
