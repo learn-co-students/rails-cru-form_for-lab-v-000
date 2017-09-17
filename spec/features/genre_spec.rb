@@ -21,7 +21,7 @@ describe 'form' do
     visit new_genre_path
 
     fill_in 'genre[name]', with: "My genre name"
-
+    
     click_on "Create Genre"
 
     expect(page).to have_content("My genre name")
