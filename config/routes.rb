@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   resources :genres
   resources :artists
 
-  patch 'songs/:id', to: 'songs#update'
-
-  get '/navigate', to: 'navigate#show'
+  # patch 'songs/:id', to: 'songs#update'
 
 end
