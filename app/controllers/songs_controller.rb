@@ -25,7 +25,7 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
     @song.update(song_params)
     redirect_to song_path(@song)
-    # Update does not need a view. Only GET requests need views. Update just handles business logic.
+    # Update does not need a view. Only GET requests need views. Update just handles business logic, e.g. takes input from Edit, validates errors, processes data, etc. It updates the database, but doesn't respond with its own view - it might however redirect you to another view, such as Show, Index, or an Edit page with error messages.
   end
 
   private
