@@ -25,6 +25,7 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
     @song.update(song_params)
     redirect_to song_path(@song)
+    # Update does not need a view. Only GET requests need views. Update just handles business logic.
   end
 
   private
