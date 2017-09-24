@@ -3,8 +3,10 @@
 <label>Song name:</label>
 <%=f.text_field :name%><br>
 <label>Song's artist_id</label>
-<%=f.select :artist_id, options_for_select(Author.all.map{|s|[s.name, s.id]}%>
+<%=f.number_field :artist_id%><br>
+<!--%=f.select :artist_id, options_for_select(Author.all.map{|s|[s.name, s.id]}%-->
 <label>Song's genre_id</label>
-<%=f.select :genre_id, options_for_select(Genre.all.map{|s|[s.name, s.id]}%>
+<%=f.number_field :genre_id%><br>
+<!--%=f.select :genre_id, options_for_select(Genre.all.map{|s|[s.name, s.id]}%-->
 <%= f.submit %>
 <% end %>
