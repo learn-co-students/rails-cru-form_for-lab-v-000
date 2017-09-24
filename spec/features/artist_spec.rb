@@ -32,7 +32,7 @@ describe 'form' do
 
     expect(page).to have_content("My artist name")
   end
-
+#EDIT
   it 'shows an edit form that submits content, redirects and prints out params' do
     @artist = Artist.create(name: "My Artist", bio: "My artist bio")
 
