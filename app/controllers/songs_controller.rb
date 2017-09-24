@@ -10,10 +10,10 @@ class SongsController < ApplicationController
     redirect_to song_path(@song)
   end
   def show
-      @song = Song.new
+      @song = Song.find(params[:id])
   end
   def index
-    @song = Song.all 
+    @song = Song.all
   end
 private
 
