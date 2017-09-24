@@ -1,4 +1,4 @@
-class SongController < ApplicationController
+class SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
     @song.save
