@@ -1,0 +1,5 @@
+<ul>
+<% @genres.each do |s| %>
+	<li><p><%= link_to s.name, genre_path(s) %></p></li>
+<% end %>
+</ul>
