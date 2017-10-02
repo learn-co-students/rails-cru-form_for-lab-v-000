@@ -1,0 +1,5 @@
+<% Genre.all.each do |g| %>
+  <div>
+    <%= link_to g.name, genre_path(g) %>
+  </div>
+<% end %>
