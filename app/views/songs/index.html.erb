@@ -1,0 +1,23 @@
+<h1>Listing Artists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Artist</th>
+      <th>Genre</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @songs.each do |song| %>
+      <tr>
+        <td><p><%= link_to(song.name, song) %></p></td>
+        <td><%= song.artist.name %></td>
+        <td><%= song.genre.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
