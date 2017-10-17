@@ -5,8 +5,6 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
-    @genre = Genre.find_or_create_by(params[:id])
-    @artist = Artist.find_or_create_by(params[:id])
   end
 
   def new
