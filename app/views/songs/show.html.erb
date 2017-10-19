@@ -1,0 +1,9 @@
+<h1><%=@song.name%></h1>
+
+<div>
+    <p><%=@song.name%></p>
+    <p><%=@song.artist.name unless @song.artist.nil?%></p>
+    <p><%=@song.genre.name unless @song.genre.nil?%></p>
+    <%= link_to  "#{@song.artist.name}", artist_path(@song.artist) unless @song.artist.nil? %>
+    <%= link_to  "#{@song.genre.name}", genre_path(@song.genre) unless @song.genre.nil? %>
+</div>
