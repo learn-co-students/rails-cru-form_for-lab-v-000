@@ -1,0 +1,9 @@
+<h1>Musical Genres</h1>
+
+<ul>
+	<% @genres.each do |g| %>
+		<li>
+			<h2><em><%= g.name %></em></h2>
+		</li>
+	<% end %>
+</ul>
