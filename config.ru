@@ -4,7 +4,7 @@ require ::File.expand_path('../config/environment', __FILE__)
 run Rails.application
 
 use Rack::MethodOverride
-use ArtistController
-use GenreController
-use SongController
+use ArtistsController
+use GenresController
+use SongsController
 run ApplicationController
