@@ -1,0 +1,13 @@
+<title>Create A New Song</title>
+<%= form_for @song do |f| %>
+  <label>Name:</label><br>
+  <%= f.text_field :name %><br>
+
+  <label>Artist ID:</label>
+  <%= f.text_field :artist_id %><br>
+
+  <label>Genre ID:</label>
+  <%= f.text_field :genre_id %><br>
+
+  <%= f.submit "Create Song" %>
+<% end %>
