@@ -21,7 +21,6 @@ class GenresController < ApplicationController
 
   def edit
     @genre = Genre.find(params[:id])
-    redirect_to genre_path(@genre)
   end
 
   def update
