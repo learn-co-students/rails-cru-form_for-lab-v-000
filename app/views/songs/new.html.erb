@@ -1,0 +1,13 @@
+<h1>Create a New Song</h1>
+
+<%= form_for(@song) do |f| %>
+  <%= f.label :name, "Song Name" %><br>
+  <%= f.text_field :name %><br>
+  <%= f.label :artist_id, "Artist ID" %><br>
+  <%= f.text_field :artist_id %><br>
+  <%= f.label :genre_id, "Genre ID" %><br>
+  <%= f.text_field :genre_id %><br>
+  <%= f.submit %>
+<% end %>
+
+<!-- Note: to create dropdowns for artist_id and genre_id form fields, just use f.number_field -->

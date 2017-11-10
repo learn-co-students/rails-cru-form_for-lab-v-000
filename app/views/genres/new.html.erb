@@ -1,0 +1,16 @@
+<h1>Create a New Genre</h1>
+
+<%= form_for(@genre) do |f| %>
+  <%= f.label :name, "Genre Name" %><br>
+  <%= f.text_field :name %><br>
+  <%= f.submit %>
+<% end %>
+
+<!-- Rails form_for helper method above generates the HTML form element below:
+<form class="new_genre" action="/genres" method="POST" ...>
+  ...etc
+  <input type="hidden" name="authenticity_token" value="token goes here">
+  <label for="genre_name">Genre Name</label><br>
+  <input type="text" name="genre[name]" id="genre_name"><br>
+  <input type="submit" name="commit" value="Create Genre">
+</form>

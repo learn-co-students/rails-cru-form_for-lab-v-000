@@ -1,0 +1,21 @@
+<h1>Edit Artist</h1>
+
+<%= form_for(@artist) do |f| %>
+  <%= f.label :name, "Artist Name" %><br>
+  <%= f.text_field :name %><br>
+  <%= f.label :bio, "Artist Bio" %><br>
+  <%= f.text_area :bio %><br>
+  <%= f.submit %>
+<% end %>
+
+<!-- Rails form_for helper generates the following HTML form element
+<form class="edit_artist" action="/artists/<%= @artist.id %>" method="POST" accept-charset="UTF-8">
+<input name="utf8" type="hidden" value="check mark goes here">
+<input type="hidden" name="authenticity_token" value="token goes here">
+<input type="hidden" name="_method" value="PATCH">
+<label for="artist_name">Artist Name</label><br>
+<input type="text" name="artist[name]" id="artist_name" value="<%= @artist.name %>"><br>
+<label for="artist_bio">Artist Bio</label><br>
+<textarea name="artist[bio]" id="artist_bio"><%= @artist.bio %></textarea><br>
+<input type="submit" name="commit" value="Update Artist">
+</form>
