@@ -2,3 +2,9 @@
 
 require ::File.expand_path('../config/environment', __FILE__)
 run Rails.application
+
+use Rack::MethodOverride
+use ArtistsController
+use GenresController
+use SongsController
+run ApplicationController
