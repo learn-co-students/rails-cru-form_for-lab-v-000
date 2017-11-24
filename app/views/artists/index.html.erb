@@ -1,0 +1,8 @@
+<h1>The Artists:</h1>
+
+<ol>
+  <% @artists.each do |artist| %>
+  <li><%= artist.name %></li>
+    <p><%= artist.bio %></p>
+  <% end %>
+</ol>

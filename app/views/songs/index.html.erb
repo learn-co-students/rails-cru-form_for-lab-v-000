@@ -1,0 +1,13 @@
+<h1>The Songs:</h1>
+<p>My Song</p>
+<ol>
+  <% @songs.each do |song| %>
+  <li><%= song.name %></li>
+  <% end %>
+</ol>
+
+<style>
+p {
+  color : red;
+}
+</style>
