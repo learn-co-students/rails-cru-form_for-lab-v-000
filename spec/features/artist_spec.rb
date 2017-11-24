@@ -35,7 +35,7 @@ describe 'form' do
 
   it 'shows an edit form that submits content, redirects and prints out params' do
     @artist = Artist.create(name: "My Artist", bio: "My artist bio")
-
+    
     visit edit_artist_path(@artist)
 
     fill_in 'artist[name]', with: "My edit"
