@@ -53,4 +53,10 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  resources :artists
+  resources :genres
+  resources :songs
+  post "/artists/new" => "artists#create"
+  post "/genres/new" => "genres#create"
+  post "/songs/new" => "songs#create"
 end
