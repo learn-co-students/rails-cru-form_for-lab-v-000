@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
+  resources :songs, only: [:create, :update, :show, :index, :edit, :new]
+  resources :genres, only: [:create, :update, :show, :index, :edit, :new]
+  resources :artists, only: [:create, :update, :show, :index, :edit, :new]
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
