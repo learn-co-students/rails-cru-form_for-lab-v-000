@@ -1,0 +1,2 @@
+<h1><%= @song.name %> - <%= link_to @song.genre.name, genre_path(@song) %> - <%= link_to @song.artist.name, artist_path(@song) %></h1>
+<!-- Even though the entire @song object is passed for genre and artist, rails is smart to figure out the relative path -->
