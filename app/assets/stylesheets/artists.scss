@@ -1,0 +1,11 @@
+// Place all the styles related to the Artists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+fieldset {
+  border: 0;
+  margin: 10px 0;
+  padding: 0;
+  label {
+    display: block;
+  }
+}

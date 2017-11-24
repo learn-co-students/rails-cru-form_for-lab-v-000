@@ -1,0 +1,12 @@
+<%= form_for(@artist) do |f| %>
+  <fieldset>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :bio, "Bio:" %>
+    <%= f.text_area :bio %>
+  </fieldset>
+
+  <%= f.submit %>
+<% end %>
