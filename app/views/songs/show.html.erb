@@ -1,0 +1,8 @@
+<!-- songs show -->
+<h1>My Song</h1>
+
+<%= link_to @song.name, song_path(@song)%> <br>
+<%= link_to(@song.genre.name, genre_path(@song.genre)) %>
+<%= link_to(@song.artist.name, artist_path(@song.artist)) %>
+
+<%= link_to "All Songs", songs_path%>

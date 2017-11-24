@@ -1,0 +1,7 @@
+<h1>My Artist</h1>
+
+<h1><%= @artist.name%> </h1>
+<p> <%= @artist.bio%> </p>
+<h1><%= link_to @artist.name, artist_path(@artist)%> </h1>
+<h2><%= link_to @artist.bio, artist_path(@artist)%> </h2>
+<%= link_to "All Artists", artists_path%>
