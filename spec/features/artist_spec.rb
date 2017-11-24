@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry'
 
 describe 'navigate' do
   before do
