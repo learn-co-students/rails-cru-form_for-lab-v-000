@@ -1,0 +1,8 @@
+<h1>Artists</h1>
+
+<div class="artists">
+  <% @artists.each do |artist| %>
+    <div><%= artist.name %></div>
+    <div><%= artist.bio %></div><br><br>
+  <% end %>
+</div>
