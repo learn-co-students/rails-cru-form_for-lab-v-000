@@ -1,2 +1,8 @@
-<h1>Genres#edit</h1>
-<p>Find me in app/views/genres/edit.html.erb</p>
+<h1>Edit Genre Form</h1>
+
+<%= form_for(@genre) do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.submit "Update Genre"%>
+<% end %>
