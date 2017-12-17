@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Artist.create(:name => "M&M", :bio => "I like to walk the beach at night by meself")
+Song.create(:name => "I like this website, it is nice")
+Genre.create(:name => "Polka")
