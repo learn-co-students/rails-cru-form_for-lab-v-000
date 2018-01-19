@@ -1,0 +1,6 @@
+list genres
+<% @genres.each do |genre| %>
+<ul>
+  <li><a href=<%=genre_path(genre)%>><%= genre.name %></a></li>
+</ul>
+<%end%>
