@@ -1,0 +1,7 @@
+<h2>Artists</h2>
+
+<ol>
+  <% @artists.each do |i| %>
+    <li>Artist #<%= i.id %>: <%= i.name %></li>
+  <% end %>
+</ol>

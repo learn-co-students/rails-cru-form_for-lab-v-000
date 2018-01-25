@@ -1,0 +1,10 @@
+<h2>New Song Form</h2>
+
+<%= form_tag songs_path do %>
+  <%= text_field(:song, :name) %><br>
+  <%= text_field(:song, :artist_id) %>
+  <%= text_field(:song, :genre_id) %>
+  <!-- <%= select_tag 'song[artist_id]', options_for_select(@artists.collect{ |i| [i.name, i.id] }) %><br>
+  <%= select_tag 'song[genre_id]', options_for_select(@genres.collect{ |i| [i.name, i.id] }) %><br> -->
+  <%= submit_tag "Create Song" %>
+<% end %>

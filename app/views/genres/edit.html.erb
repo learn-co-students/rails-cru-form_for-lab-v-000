@@ -1,0 +1,6 @@
+<h2>Edit Genre Form</h2>
+
+<%= form_tag genre_path(@genre), method: "patch" do %>
+  <%= text_field(:genre, :name) %>
+  <%= submit_tag "Update Genre" %>
+<% end %>

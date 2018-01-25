@@ -1,0 +1,7 @@
+<h2>New Artist Form</h2>
+
+<%= form_tag artists_path do %>
+  <%= text_field(:artist, :name) %>
+  <%= text_field(:artist, :bio) %>
+  <%= submit_tag "Create Artist" %>
+<% end %>
