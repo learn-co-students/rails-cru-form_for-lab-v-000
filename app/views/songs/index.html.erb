@@ -1,0 +1,6 @@
+<p>My Song</p>
+<ol>
+  <% @songs.each do |i| %>
+    <li>song #<%= i.id %>: <%= i.name %></li>
+  <% end %>
+</ol>

@@ -1,0 +1,8 @@
+<h2>Edit Song Form</h2>
+
+<%= form_tag song_path(@song), method: "patch" do %>
+  <%= text_field(:song, :name) %>
+  <%= text_field(:song, :artist_id) %>
+  <%= text_field(:song, :genre_id) %>
+  <%= submit_tag "Update Song" %>
+<% end %>

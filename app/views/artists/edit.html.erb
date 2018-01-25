@@ -1,0 +1,7 @@
+<h2>Edit Artist Form</h2>
+
+<%= form_tag artist_path(@artist), method: "patch" do %>
+  <%= text_field(:artist, :name) %>
+  <%= text_field(:artist, :bio) %>
+  <%= submit_tag "Update Artist" %>
+<% end %>
