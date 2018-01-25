@@ -4,8 +4,5 @@
   <%= text_field(:song, :name) %>
   <%= text_field(:song, :artist_id) %>
   <%= text_field(:song, :genre_id) %>
-
-  <!-- <%= select_tag 'song[artist_id]', options_for_select(@artists.collect{ |i| [i.name, i.id] }) %><br>
-  <%= select_tag 'song[genre_id]', options_for_select(@genres.collect{ |i| [i.name, i.id] }) %><br> -->
   <%= submit_tag "Update Song" %>
 <% end %>
