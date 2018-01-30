@@ -1,0 +1,13 @@
+<h1>Songs</h1>
+
+<dl>
+  <% @songs.each do |s| %>
+    <dt><%= link_to s.name, song_path(s) %> </dt>
+    <% if s.artist != nil %>
+      <dd>Artist: <%= link_to s.artist.name, artist_path(s.artist) %></dd>
+    <% end %>
+    <% if s.genre != nil %>
+      <dd>Genre: <%= link_to s.genre.name, genre_path(s.genre) %></dd>
+    <% end %>
+  <% end %>
+</dl>
