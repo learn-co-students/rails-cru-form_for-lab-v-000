@@ -1,0 +1,9 @@
+<h1><%=@song.name%></h1>
+
+<label>Artist: </label>
+<a href="/artists/<%=@song.artist.id%>"><%=@song.artist.name%></a>
+
+<br></br>
+
+<label>Genres: </label>
+<a href="/genres/<%=@song.genre.id%>"><%=@song.genre.name%></a>
