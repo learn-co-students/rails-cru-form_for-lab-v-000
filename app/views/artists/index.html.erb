@@ -1,0 +1,14 @@
+<h1>Great Artists</h1>
+
+<ul>
+	<% @artists.each do |artist| %>
+		<li>
+			<h2><%= artist.name %></h2>
+			<blockquote>
+				<em>
+					<%= artist.bio %>
+				</em>
+			</blockquote>
+		</li>
+	<% end %>
+</ul>
