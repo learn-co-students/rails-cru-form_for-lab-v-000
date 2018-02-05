@@ -1,0 +1,10 @@
+<%= Song.all.each do |song| %>
+  <ul>
+    <li><p><%= song.name %></p>
+      <ul>
+        <li><%= link_to song.artist.name, songs_path %></li>
+        <li><%= link_to song.genre.name, genres_path %></li>
+      </ul>
+    </li>
+  </ul>
+<% end %>
