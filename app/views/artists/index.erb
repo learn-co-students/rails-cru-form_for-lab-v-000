@@ -1,0 +1,4 @@
+<% @artists.each do |a| %>
+	<p><%= link_to a.name, artist_path(a) %></p>
+	<p><%= a.bio %></p>
+<% end %>
