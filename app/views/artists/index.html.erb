@@ -1,0 +1,5 @@
+Index of Artists
+
+<% @artists.each do |x|%>
+<%= link_to x.name, artist_path(x) %><br/>
+<%end%>
