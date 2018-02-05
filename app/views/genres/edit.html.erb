@@ -1,0 +1,19 @@
+<h1>Edit Genre</h1>
+
+<%= form_for(@genre) do |f| %>
+  <%= f.label :name, "Genre Name" %><br>
+  <%= f.text_field :name %><br>
+  <%= f.submit %>
+<% end %>
+
+<!-- form_for Rails helper above generates the HTML form element below:
+(Note: the form field is prefilled in)
+
+<form class="edit_genre" action="/genres/<%= @genre.id %>" method="POST" ...etc>
+  ...etc
+  <input type="hidden" name="authenticity_token" value="token goes here">
+  <input type="hidden" name="_method" value="PATCH">
+  <label for="genre_name">Genre Name</label>
+  <input type="text" name="genre[name]" id="genre_name" value="<%= @genre.name %>">
+  <input type="submit" name="commit" value="Update Genre">
+</form>
