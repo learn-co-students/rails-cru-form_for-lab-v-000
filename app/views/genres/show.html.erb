@@ -1,0 +1,18 @@
+<h1><%= @genre.name %></h1>
+
+<% if !@songs.empty? %>
+  <h3>Songs</h3>
+  <%= @songs.each do |song| %>
+    <%= link_to song.name, song_path(song) %>
+  <% end %>
+<% end %>
+
+<% if !@artists.empty? %>
+  <h3>Artists</h3>
+  <%= @artists.each do |artist| %>
+    <%= link_to artist.name, artist_path(artist) %>
+  <% end %>
+<% end %>
+
+<br><br>
+<%= link_to "Genres", genres_path %>
