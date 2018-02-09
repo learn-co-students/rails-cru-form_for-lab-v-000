@@ -10,7 +10,7 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.create(strong_params(:artist, :name, :bio))
-    redirect_to "/artists/#{@artist.id}"
+    redirect_to artist_path(@artist)
   end
 
   def edit
@@ -20,7 +20,7 @@ class ArtistsController < ApplicationController
   def update
     @artist = Artist.find(params[:id])
     @artist.update(strong_params(:artist, :name, :bio))
-    redirect_to "/artists/#{@artist.id}"
+    redirect_to artist_path(@artist)
   end
 
 end
