@@ -1,0 +1,19 @@
+<%= form_for(@song) do |f| %>
+  <%= f.label :name, "Song Name:" %> <br>
+  <%= f.text_field :name %> <br>
+  <%= f.label :genre_id, "Choose Genre:" %> <br>
+  <%= f.number_field :genre_id %> <br>
+  <% Genre.all.each do |genre| %>
+    <%= f.radio_button :genre_id, genre.id %>
+    <%= f.label :genre_id, genre.name %> <br>
+  <% end %>
+
+  <%= f.label :artist_id, "Choose Artist:" %> <br>
+  <%= f.number_field :artist_id %> <br>
+  <% Artist.all.each do |artist| %>
+    <%= f.radio_button :artist_id, artist.id  %>
+    <%= f.label :artist_id, artist.name %> <br>
+  <% end %>
+
+  <%= f.submit %>
+<% end %>
