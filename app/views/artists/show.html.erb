@@ -2,6 +2,6 @@
 <p> <%= @artist.bio %> </p>
 
 <b>Songs</b> <br><br>
-<% @artist_songs.each do |song| %>
+<% @artist.songs.each do |song| %>
   <%= link_to song.name, song_path(song)%>
 <% end %>

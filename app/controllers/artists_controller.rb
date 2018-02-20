@@ -6,7 +6,6 @@ class ArtistsController < ApplicationController
 
   def show
     @artist = Artist.find(params[:id])
-    @artist_songs = Song.all.select {|song| song.artist_id == @artist.id}
   end
 
   def new
