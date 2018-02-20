@@ -6,6 +6,7 @@ class GenresController < ApplicationController
 
   def show
     @genre = Genre.find(params[:id])
+    @genre_songs = Song.all.select {|song| song.genre_id == @genre.id}
   end
 
   def new
