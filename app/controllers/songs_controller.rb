@@ -4,6 +4,10 @@ def show
     @song = Song.find(params[:id])
 end
 
+def new
+	  @song = Song.new
+	end
+
 def create
     @song = Song.new(song_params(:name, :artist_id, :genre_id))
     @song.save
@@ -15,6 +19,10 @@ def update
   @song.update(song_params(:song))
   redirect_to song_path(@song)
 end 
+
+def edit
+	  @song = Song.find(params[:id])
+	end
     
     
 def song_params(*args)

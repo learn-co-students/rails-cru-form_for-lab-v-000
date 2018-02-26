@@ -4,6 +4,11 @@ def show
     @artist =Artist.find(params[:id])
 end
 
+def new
+		@artist = Artist.new
+	end
+
+
 def create
     @artist = Artist.new(artist_params(:name, :bio))
     @artist.save
@@ -15,6 +20,11 @@ def update
   @artist.update(artist_params(:artist))
   redirect_to artist_path(@artist)
 end 
+
+def edit
+	  @artist = Artist.find(params[:id])
+	end
+	
     
     
 def artist_params(*args)

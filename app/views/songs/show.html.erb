@@ -1,3 +1,3 @@
 <@ @song.all.each.do |song| %>
-<%=link_to song.genre, genre_path(song.genre_id) %>
-<%=link_to song.artist, artist_path(song.artist_id) %>
+<h1><%=link_to song.genre, song_path(song.genre_id) %></h1>
+<h1><%=link_to song.artist, song_path(song.artist_id) %></h1>
