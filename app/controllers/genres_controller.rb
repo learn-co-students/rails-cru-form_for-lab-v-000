@@ -1,7 +1,7 @@
 class GenresController < ApplicationController
     
 def show
-    @genre = Genre.find(param[:id])
+    @genre = Genre.find(params[:id])
 end
 
 def create

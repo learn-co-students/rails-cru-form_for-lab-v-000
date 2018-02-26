@@ -1,11 +1,11 @@
 class ArtistsController < ApplicationController
         
 def show
-    @artist =Artist.find(param[:id])
+    @artist =Artist.find(params[:id])
 end
 
 def create
-    @artist = Artist.new(artist_params(:name))
+    @artist = Artist.new(artist_params(:name, :bio))
     @artist.save
     redirect_to artist_path(@artist)
 end
