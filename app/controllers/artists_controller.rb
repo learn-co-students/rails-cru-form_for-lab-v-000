@@ -6,7 +6,7 @@ end
 
 def new
 		@artist = Artist.new
-	end
+end
 
 
 def create
@@ -15,15 +15,17 @@ def create
     redirect_to artist_path(@artist)
 end
 
+def edit
+	  @artist = Artist.find(params[:id])
+end
+
 def update
    @artist = Artist.find(params[:id])
   @artist.update(artist_params(:artist))
   redirect_to artist_path(@artist)
 end 
 
-def edit
-	  @artist = Artist.find(params[:id])
-	end
+
 	
     
     
