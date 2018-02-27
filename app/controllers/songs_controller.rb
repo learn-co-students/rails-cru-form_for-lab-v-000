@@ -6,8 +6,7 @@ end
     
 def show
     @song = Song.find(params[:id])
-     @song.genre = Genre.find(params[@song.genre_id])
-      @song.artist = Artist.find(params[@song.artist_id])
+
 end
 
 def new
@@ -20,15 +19,17 @@ def create
     redirect_to song_path(@song)
 end
 
+def edit
+	  @song = Song.find(params[:id])
+end
+
 def update
    @song = Song.find(params[:id])
   @song.update(song_params(:song))
   redirect_to song_path(@song)
 end 
 
-def edit
-	  @song = Song.find(params[:id])
-end
+
     
     
 def song_params(*args)
