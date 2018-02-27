@@ -6,7 +6,7 @@ end
     
 def show
     @song = Song.find(params[:id])
-     @song.genre = Song.find(params[@song.genre_id])
+     @song.genre = Genre.find(params[@song.genre_id])
       @song.artist = Artist.find(params[@song.artist_id])
 end
 
