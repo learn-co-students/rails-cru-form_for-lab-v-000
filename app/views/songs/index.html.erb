@@ -1,0 +1,10 @@
+<h1>Songs Index</h1>
+<ul>
+<% @songs.each do |s| %>
+  <p>My Song<br>
+    <%= s.name %>
+    <%= s.genre.name %>
+    <%= s.artist.name %>
+  </p>
+<% end %>
+</ul>
