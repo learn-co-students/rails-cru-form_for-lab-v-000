@@ -13,13 +13,13 @@ class GenresController < ApplicationController
   end
 
   def create
-    @genre = Genre.find(params[:id])
-  end
-
-  def edit
     @genre = Genre.create(genre_params(:name))
     @genre.save
     redirect_to genre_path(@genre)
+  end
+
+  def edit
+    @genre = Genre.find(params[:id])
   end
 
   def update
