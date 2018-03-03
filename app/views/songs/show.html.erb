@@ -1,0 +1,13 @@
+<h1><%= @song.name %></h1>
+
+<% if @genre != nil %>
+  <p><%= link_to @genre.name, genre_path(@genre) %></p>
+<% else %>
+  <p> No genre for this song </p>
+<% end %>
+
+<% if @artist != nil %>
+  <p><%= link_to @artist.name, artist_path(@artist) %></p>
+<% else %>
+  <p> No artist for this song </p>
+<% end %>
