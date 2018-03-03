@@ -1,0 +1,13 @@
+<h1>New Song</h1><br>
+
+<%= form_for(@song) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :artist_id %>
+  <%= f.number_field :artist_id %>
+  <%= f.label :genre_id %>
+  <%= f.number_field :genre_id %>
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= f.submit %>
+<% end %>
