@@ -35,11 +35,11 @@ ActiveRecord::Schema.define(version: 20180306220134) do
   end
 
   create_table "songs_genres", force: :cascade do |t|
-    t.integer "songs_id"
-    t.integer "genres_id"
+    t.integer "song_id"
+    t.integer "genre_id"
   end
 
-  add_index "songs_genres", ["genres_id"], name: "index_songs_genres_on_genres_id"
-  add_index "songs_genres", ["songs_id"], name: "index_songs_genres_on_songs_id"
+  add_index "songs_genres", ["genre_id"], name: "index_songs_genres_on_genre_id"
+  add_index "songs_genres", ["song_id"], name: "index_songs_genres_on_song_id"
 
 end

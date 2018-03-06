@@ -15,8 +15,8 @@ class SongsAndGenres < ActiveRecord::Migration
       end
 
       create_table :songs_genres do |t|
-        t.belongs_to :songs, index: true
-        t.belongs_to :genres, index: true
+        t.belongs_to :song, index: true
+        t.belongs_to :genre, index: true
       end
     end
 
