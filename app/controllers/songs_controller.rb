@@ -7,10 +7,10 @@ class SongsController < ApplicationController
   def show
     set_song
     if Artist.find_by(:id => @song.artist_id)
-      @artist = Artist.find_by(:id => @song.artist_id)
+      @song.artist = Artist.find_by(:id => @song.artist_id)
     end
     if Genre.find_by(:id => @song.genre_id)
-      @genre = Genre.find_by(:id => @song.genre_id)
+      @song.genre = Genre.find_by(:id => @song.genre_id)
     end
   end
 
@@ -19,10 +19,26 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(song_params(:name))
-    @song.artist = Artist.find_or_create_by(:name => params[:song][:artist])
-    @song.genre = Genre.find_or_create_by(:name => params[:song][:genre])
+    @song = Song.new(:name => song_params[:name])
+
+    if Artist.find_by(:name => song_params[:artist])
+      @artist = Artist.find_by(:name => song_params[:artist])
+    else
+      @artist = Artist.new(:name => song_params[:artist])
+    end
+    @artist.save
+
+    if Genre.find_by(:name => song_params[:genre])
+      @genre = Genre.find_by(:name => song_params[:genre])
+    else
+      @genre = Genre.new(:name => song_params[:genre])
+    end
+    @genre.save
+
+    @song.artist_id  = @artist.id
+    @song.genre_id = @genre.id
     @song.save
+
     redirect_to song_path(@song)
   end
 
@@ -43,7 +59,7 @@ class SongsController < ApplicationController
   end
 
   def song_params(*args)
-    params.require(:song).permit(*args)
+    params.require(:song).permit(:name, :artist, :genre)
   end
 
 end
