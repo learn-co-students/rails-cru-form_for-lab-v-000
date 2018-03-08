@@ -13,10 +13,13 @@ class GenresController < ApplicationController
   end
 
   def create
-    @genre = Genre.new(genre_params(:name))
-    @genre.artist = Artist.find_or_create_by(:name => params[:genre][:artist])
-    @genre.genre = Genre.find_or_create_by(:name => params[:genre][:genre])
+    if Genre.find_by(:name => genre_params[:name])
+      @genre = Genre.find_by(:name => genre_params[:name])
+    else
+    @genre = Genre.new(:name => genre_params[:name])
+    end
     @genre.save
+
     redirect_to genre_path(@genre)
   end
 
@@ -26,7 +29,7 @@ class GenresController < ApplicationController
 
   def update
     set_genre
-    @genre.update(genre_params(:name, :bio))
+    @genre.update(genre_params(:name))
     redirect_to genre_path(@genre)
   end
 
@@ -37,7 +40,7 @@ class GenresController < ApplicationController
   end
 
   def genre_params(*args)
-    params.require(:genre).permit(*args)
+    params.require(:genre).permit(:name)
   end
 
 end

@@ -6,12 +6,6 @@ class SongsController < ApplicationController
 
   def show
     set_song
-    if Artist.find_by(:id => @song.artist_id)
-      @song.artist = Artist.find_by(:id => @song.artist_id)
-    end
-    if Genre.find_by(:id => @song.genre_id)
-      @song.genre = Genre.find_by(:id => @song.genre_id)
-    end
   end
 
   def new
@@ -19,8 +13,6 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.create(:name => song_params[:name])
-
     if Artist.find_by(:name => song_params[:artist])
       @artist = Artist.find_by(:name => song_params[:artist])
     else
@@ -35,9 +27,7 @@ class SongsController < ApplicationController
     end
     @genre.save
 
-    @song.artist_id  = @artist.id
-    @song.genre_id = @genre.id
-    @song.save
+    @song = Song.create(:name => song_params[:name], :artist_id => @artist.id, :genre_id => @genre.id)
 
     redirect_to song_path(@song)
   end
@@ -47,8 +37,11 @@ class SongsController < ApplicationController
   end
 
   def update
-    set_song
-    @song.update(song_params(:name, :bio))
+    @artist = Artist.find_by(:name => song_params[:artist])
+    @genre = Genre.find_by(:name => song_params[:genre])
+
+    @song.update(:name => song_params(:name), :genre_id => @genre.id, :artist_id => @artist.id)
+
     redirect_to song_path(@song)
   end
 
