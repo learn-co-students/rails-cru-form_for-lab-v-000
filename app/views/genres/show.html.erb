@@ -1,0 +1,15 @@
+<h1><%= @genre.name %></h1>
+
+<label>Songs:  </label>
+  <% @songs.each do |song| %>
+  <% if song.genre_id == @genre.id %>
+  <p><%= link_to song.name, song_path(song) %></p>
+  <% end %>
+  <% end %>
+
+<label>Artists:  </label>
+  <% @songs.each do |song| %>
+  <% if song.genre_id == @genre.id %>
+  <p><%= link_to song.artist.name, artist_path(song) %></p>
+    <% end %>
+    <% end %>
