@@ -19,7 +19,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(:name => song_params[:name])
+    @song = Song.create(:name => song_params[:name])
 
     if Artist.find_by(:name => song_params[:artist])
       @artist = Artist.find_by(:name => song_params[:artist])
