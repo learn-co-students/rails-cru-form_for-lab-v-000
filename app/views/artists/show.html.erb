@@ -7,3 +7,10 @@
    <li> <%= link_to s.name, song_path(s) %> </li>
    <% end %>
  </ol>
+
+ <label>Genres:</label>
+ <ol>
+   <% @artist.songs.each do |s| %>
+    <li> <%= link_to s.genre.name, genre_path(s) %> </li>
+    <% end %>
+  </ol>
