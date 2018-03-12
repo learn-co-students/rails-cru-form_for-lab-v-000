@@ -1,13 +1,5 @@
 <h1><%= @song.name %></h1>
-<%= link_to @song.genre.name,  %>
+<%= link_to @song.genre.name,  genre_path(@song.genre)%>
+<%= link_to @song.artist.name, artist_path(@song.artist) %>
 
 
-
-
-
-
-
-
-<% @category.posts.each do |post| %>
-  <div><%= link_to post.title, post_path(post) %></div>
-<% end %>
