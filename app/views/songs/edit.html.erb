@@ -1,0 +1,43 @@
+<h3>Song Form</h3>
+<%= form_for(@song) do |f| %>
+  <label>Song Name:</label><br>
+  <%= f.text_field :name %><br>
+  <label>Artist ID:</label><br>
+  <%= f.number_field :artist_id %><br>
+  <label>Genre ID:</label><br>
+  <%= f.number_field :genre_id %><br>
+  <%= f.submit %>
+<% end %>
+
+
+<div>
+  <h5>Artists<h5>
+  <table style="width:50%">
+    <tr>
+      <th>ID</th>
+      <th>Artist Name</th>
+    </tr>
+    <% @artists.each do |artist| %>
+    <tr>
+      <td><%= artist.id %></td>
+      <td><%= artist.name %></td> 
+    </tr>
+    <% end %>
+  </table>
+</div>
+
+<div>  
+  <h5>Genres<h5>
+  <table style="width:50%">
+    <tr>
+      <th>ID</th>
+      <th>Genre Name</th>
+    </tr>
+    <% @genres.each do |genre| %>
+    <tr>
+      <td><%= genre.id %></td>
+      <td><%= genre.name %></td> 
+    </tr>
+    <% end %>
+  </table>
+</div>
