@@ -39,7 +39,7 @@ describe 'form' do
   it 'shows a new form that submits content and redirects and prints out params' do
     visit new_song_path
 
-    fill_in 'song[name]', with: "My song name"
+    fill_in 'song_name', with: "My song name"
     fill_in 'song[artist_id]', with: @artist.id
     fill_in 'song[genre_id]', with: @genre.id
 
@@ -53,7 +53,7 @@ describe 'form' do
 
     visit edit_song_path(@song)
 
-    fill_in 'song[name]', with: "My edit"
+    fill_in 'song_name', with: "My edit"
     fill_in 'song[artist_id]', with: @artist.id
     fill_in 'song[genre_id]', with: @genre.id
 
