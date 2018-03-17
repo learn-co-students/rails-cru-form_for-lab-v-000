@@ -1,0 +1,7 @@
+<h1>My Songs</h1>
+<%=@song.name%>
+
+
+<%= link_to Artist.find(@song.artist_id).name, artist_path(Artist.find(@song.artist_id))%>
+
+<%= link_to Genre.find(@song.genre_id).name, genre_path(Genre.find(@song.genre_id))%>
