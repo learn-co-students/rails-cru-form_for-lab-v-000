@@ -1,0 +1,9 @@
+<div>
+  <% @artists.each do |artist| %>
+    <div class="">
+      <%= link_to artist.to_s, artist_path(artist) %>
+    </div>
+  <% end %>
+</div>
+
+<%= button_to "Create a new Artist", new_artist_path, :method => "get" %>

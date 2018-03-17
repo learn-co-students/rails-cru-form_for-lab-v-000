@@ -1,0 +1,11 @@
+<div>
+  <% @songs.each do |song| %>
+    <div class="">
+      <p>
+      <%= link_to song.to_s, song_path(song) %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<%= button_to "Create a new Song", new_song_path, :method => "get" %>
