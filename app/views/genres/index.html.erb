@@ -1,0 +1,6 @@
+<h1>Genres</h1>
+<ul class="item-list">
+  <% @genres.each do |genre| %>
+    <li><%= link_to "#{genre.name}", genre_path(genre) %></li>
+  <% end %>
+</ul>
