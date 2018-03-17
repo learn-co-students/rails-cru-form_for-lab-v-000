@@ -1,0 +1,14 @@
+<%= form_for(@genre) do |g| %>
+  <%= g.label :name %>
+  <%= g.text_field :name %><br></br>
+
+  <%= g.label "Artists" %>
+  <%= g.collection_select :artist_ids, Artist.all, :id, :name %><br></br>
+  
+  <%= g.label "Songs in this genre" %><br></br>
+  <%= g.collection_check_boxes :song_ids, Song.all, :id, :name %><br></br>
+
+  <%= g.submit %>
+
+
+<% end %>
