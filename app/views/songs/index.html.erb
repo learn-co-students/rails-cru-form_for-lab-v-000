@@ -1,0 +1,6 @@
+<h1>Songs</h1>
+<% @songs.each.with_index(1) do |song, index| %>
+  <%= index %>. <%= song.name %>
+  <%= link_to song.genre.name, genre_path(song.genre) if song.genre %>
+  <%= link_to song.artist.name, artist_path(song.artist) if song.artist %>
+<% end %>
