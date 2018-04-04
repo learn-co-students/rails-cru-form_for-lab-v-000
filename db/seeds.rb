@@ -5,8 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-songs = Song.create!([{name: "Attention"}, {name: "1 Thing"}, {name: "Delilah"}, {name: "Midnight Blues"}])
+Song.create!([{name: "Attention"}, {name: "1 Thing"}, {name: "Delilah"}, {name: "Midnight Blues"}])
 
-artists = Artist.create!([{name: "Charlie Puth"}, {name: "Amelia"},{name: "Florence + the Machine"},{name: "Cherlene"}])
+Genre.create!([{name: "R&B"}, {name: "Pop"}, {name: "Alternative"}, {name: "Country"}])
 
-genres = Genre.create!([{name: "R&B"}, {name: "Pop"}, {name:"Alternative"},{name:"Country"}, {name:"Test", bio: "I am a test."}] )
+Artist.create!([{name: "Charlie Puth", bio: "A guy."}, {name: "Amelia", bio: "A gal."}, {name:"Florence + the Machine", bio: "A gal."}, {name: "Cherlene", bio: "A fictional gal."}])
