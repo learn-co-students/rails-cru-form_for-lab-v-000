@@ -9,4 +9,4 @@ songs = Song.create!([{name: "Attention"}, {name: "1 Thing"}, {name: "Delilah"},
 
 artists = Artist.create!([{name: "Charlie Puth"}, {name: "Amelia"},{name: "Florence + the Machine"},{name: "Cherlene"}])
 
-genres = Genre.create!([{name: "R&B"}, {name: "Pop"}, {name:"Alternative"},{name:"Country"}, {name:"Test", bio: "I am a test."}]
+genres = Genre.create!([{name: "R&B"}, {name: "Pop"}, {name:"Alternative"},{name:"Country"}, {name:"Test", bio: "I am a test."}] )
