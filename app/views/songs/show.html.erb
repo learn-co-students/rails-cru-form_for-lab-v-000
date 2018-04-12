@@ -1,1 +1,7 @@
-show.html.erb
+<!-- display each of the song's genre and artist, and link to the respective genre and artist show pages. -->
+
+<h1><%= @song.name %></h1>
+
+	<%= (link_to @song.artist_id, artist_path(@song.artist)) if @song.artist_id%><br>
+	<%= (link_to @song.genre_id, genre_path(@song.genre)) if @song.genre_id%><br>
+
