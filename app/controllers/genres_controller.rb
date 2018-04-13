@@ -34,5 +34,5 @@ class GenresController < ApplicationController
   		params.require(:genre).permit(:name)
   		# strong params go here
 	   end
-     
+
 end
