@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
 
-	def index
+	  def index
   		@songs = Song.all
   	end
 
@@ -33,6 +33,6 @@ class SongsController < ApplicationController
   		def song_params
   			params.require(:song).permit(:name, :artist_id, :genre_id)
   			# strong params go here
-		end
+		  end
 
 end
