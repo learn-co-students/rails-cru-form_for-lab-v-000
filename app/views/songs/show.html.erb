@@ -1,0 +1,10 @@
+<!-- display each of the song's genre and artist, and link to the respective genre and artist show pages. -->
+
+<h1><%= @song.name %></h1>
+
+	<p><%= link_to @song.artist.name, artist_path(@song.artist) %></p>
+	<p><%= link_to @song.genre.name, genre_path(@song.genre) %></p>
+	
+
+
+
