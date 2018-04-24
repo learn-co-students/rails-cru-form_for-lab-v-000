@@ -13,7 +13,7 @@ class SongsController < ApplicationController
 		@song = Song.new(song_params)
 		@song.save
 		session[:form_params] = params.inspect
-		redirect_to new_song_path
+		redirect_to song_path(@song)
 	end 
 
 	def show 
