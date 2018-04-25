@@ -1,32 +1,32 @@
-class SongsController < ApplicationController
+class GenresController < ApplicationController
 
   def new
-    @song = Genre.new
+    @genre = Genre.new
   end
 
   def show
-    @song = Song.find(params[:id])
+    @genre = Genre.find(params[:id])
   end
 
   def create
-    @song = Song.create(song_params(:name))
-    redirect_to song_path(@song)
+    @genre = Genre.create(genre_params(:name))
+    redirect_to genre_path(@genre)
   end
 
   def edit
-    @song = Song.find(params[:id])
+    @genre = Genre.find(params[:id])
   end
 
   def update
-    @song = Song.find(params[:id])
-    @song.update(song_params(:name))
-    redirect_to song_path(@song)
+    @genre = Genre.find(params[:id])
+    @genre.update(genre_params(:name))
+    redirect_to genre_path(@genre)
   end
 
   private
 
-  def song_params(*args)
-    params.require(:song).permit(*args)
+  def genre_params(*args)
+    params.require(:genre).permit(*args)
   end
 
 
