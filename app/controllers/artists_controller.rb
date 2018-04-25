@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
 
   def new
+    @artist = Artist.new
   end
 
   def show
@@ -8,6 +9,8 @@ class ArtistsController < ApplicationController
   end
 
   def create
+    @artist = Artist.create(params[:artist])
+    redirect_to artist_path(@artist)
   end
 
   def update
