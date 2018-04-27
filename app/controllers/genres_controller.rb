@@ -1,6 +1,6 @@
-class ArtistsController < ApplicationController
+class GenresController < ApplicationController
   def index
-    redirect_to 'artists#navigate'
+
   end
 
   def new
