@@ -5,35 +5,35 @@ class GenresController < ApplicationController
 
   def new
     #render new form
-    @artist = Artist.new
+    @genre = Genre.new
   end
 
   def create
     #create new Object
     #reroute to show page
-    @artist = Artist.create(params.require(:artist).permit(:name, :bio))
-    redirect_to artist_path(@artist)
+    @genre = Genre.create(params.require(:genre).permit(:name))
+    redirect_to genre_path(@genre)
   end
 
   def show
     #query object by id
     #render show page with object specific info
-    @artist = Artist.find(params[:id])
-    @artists = Artist.all
+    @genre = Genre.find(params[:id])
+    @artists = Genre.all
   end
 
   def edit
     #query object by id
-    @artist = Artist.find(params[:id])
+    @genre = Genre.find(params[:id])
     #render edit form
   end
 
   def update
     #query object by id
     #update that object
-    @artist = Artist.find(params[:id])
-    @artist.update(params.require(:artist).permit(:name, :bio))
-    redirect_to artist_path(@artist)
+    @genre = Genre.find(params[:id])
+    @genre.update(params.require(:genre).permit(:name))
+    redirect_to genre_path(@genre)
     #reroute to show page
   end
 end
