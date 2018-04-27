@@ -1,4 +1,8 @@
 class ArtistsController < ApplicationController
+  def index
+    redirect_to 'artists#navigate'
+  end
+
   def new
     #render new form
     @artist = Artist.new
