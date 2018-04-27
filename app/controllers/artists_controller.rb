@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    #render new form
+    #render new formd
     @artist = Artist.new
   end
 
