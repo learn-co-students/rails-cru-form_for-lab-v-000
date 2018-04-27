@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   def index
-    redirect_to 'artists#navigate'
+    @artists = Artist.all
   end
 
   def new
@@ -19,7 +19,6 @@ class ArtistsController < ApplicationController
     #query object by id
     #render show page with object specific info
     @artist = Artist.find(params[:id])
-    @artists = Artist.all
   end
 
   def edit
