@@ -19,7 +19,7 @@ class SongsController < ApplicationController
   end
 
   def edit
-    @song = Song.find_by(params[:id])
+    @song = Song.find(params[:id])
   end
 
   def update
