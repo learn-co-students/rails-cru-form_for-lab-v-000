@@ -23,4 +23,13 @@ class ArtistsController < ApplicationController
     def edit 
         @artist = Artist.find(params["id"])
     end
+
+    def update 
+        @artist = Artist.find(params["id"])
+        @artist.name = params["artist"]["name"]
+        @artist.bio = params["artist"]["bio"]
+        @artist.save
+
+        redirect_to artist_path(@artist)
+    end
 end
