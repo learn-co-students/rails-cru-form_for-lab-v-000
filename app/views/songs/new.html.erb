@@ -1,0 +1,12 @@
+<%= form_tag songs_path do %>
+    <label>Song Name: </label><br>
+    <input type="text" name="song[name]" id="song[name]"><br>
+
+    <label>Artist ID: </label><br>
+    <input type="text" name="song[artist_id]" id="song[artist_id]"><br>
+
+    <label>Genre ID: </label><br>
+    <input type="text" name="song[genre_id]" id="song[genre_id]"><br>
+
+    <%= submit_tag "Create Song" %>
+<% end %>
