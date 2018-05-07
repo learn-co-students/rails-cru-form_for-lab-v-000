@@ -46,6 +46,10 @@ table "songs"
   integer  "genre_id"
 ```
 
+rails g resource Artist name:string bio:text --no-test-framework
+rails g resource Genre name:string --no-test-framework
+rails g resource Song name:string artist_id:integer genre_id:integer --no-test-framework
+
 ## Key notes to remember
 
 * You will need to use [strong params](https://github.com/learn-co-curriculum/strong-params-basics)
