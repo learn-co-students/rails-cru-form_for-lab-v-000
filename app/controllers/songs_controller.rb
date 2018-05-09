@@ -12,7 +12,8 @@ class SongsController < ApplicationController
     end
   
     def create
-      @song = Song.new(name: params[:song][:name])
+      @song = Song.new(name: params[:song][:name], artist_id: params[:song][:artist_id])
+    #   @book = @author.books.create(published_at: Time.now)
       @song.save
       redirect_to song_path(@song)
     end
