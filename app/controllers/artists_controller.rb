@@ -15,17 +15,14 @@ class ArtistsController < ApplicationController
   end
 
   def edit
-    binding.pry
-    @artist = Artist.find_by(params[:id])
+    @artist = Artist.find(params[:id])
   end
 
-  def shows
-    binding.pry
-    @artist = Artist.find_by(params[:id])
+  def show
+    @artist = Artist.find(params[:id])
   end
 
   def update
-    binding.pry
     @artist = Artist.find_by(params[:id])
     @artist.update(artist_params(:name, :bio))
     redirect_to artist_path(@artist)
