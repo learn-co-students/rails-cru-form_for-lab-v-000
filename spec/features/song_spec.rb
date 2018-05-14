@@ -12,13 +12,13 @@ describe 'navigate' do
     expect(page).to have_css("h1", text: "My Song")
   end
 
-  it 'displays a link to the genre page' do 
+  it 'displays a link to the genre page' do
     visit song_path(@song.id)
 
     expect(page).to have_link(@genre.name, href: genre_path(@genre))
   end
 
-  it 'displays a link to the artist page' do 
+  it 'displays a link to the artist page' do
     visit song_path(@song.id)
 
     expect(page).to have_link(@artist.name, href: artist_path(@artist))
@@ -48,7 +48,7 @@ describe 'form' do
     expect(page).to have_content("My song name")
   end
 
-  it 'shows a new form that submits content and redirects and prints out params' do
+  it 'shows an edit form that submits content and redirects and prints out params' do
     @song = Song.create(name: "My Song", artist_id: @artist.id, genre_id: @genre.id)
 
     visit edit_song_path(@song)
@@ -75,5 +75,5 @@ describe 'index' do
     expect(page).to have_css("p", text: "My Song")
   end
 
-  
+
 end

@@ -1,0 +1,8 @@
+<h1>My Songs</h1>
+
+<% @songs.each do |s| %>
+<p>My Song</p>
+<%= s.name %>
+<%= s.artist_id %>
+<%= s.genre_id %>
+<% end %>
