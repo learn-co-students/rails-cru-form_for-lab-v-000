@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :songs
   resources :genres
   resources :artists
-  root 'application_controller#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
