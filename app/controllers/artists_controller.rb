@@ -1,8 +1,4 @@
-class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
-
+class ArtistsController < ApplicationController
   def show
     find_artist
   end
@@ -13,6 +9,7 @@ class ApplicationController < ActionController::Base
 
   def create
     @artist = Artist.create(artist_params)
+    @artist.save
     redirect_to artist_path(@artist)
   end
 
