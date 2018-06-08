@@ -4,7 +4,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(genre_params)
+    @song = Song.new(song_params)
     @song.save
     redirect_to song_path(@song)
   end
@@ -20,6 +20,7 @@ class SongsController < ApplicationController
   end
 
   def index
+    @song = Song.find_by(params[:id])
   end
 
   def show
