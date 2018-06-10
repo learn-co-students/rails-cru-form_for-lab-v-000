@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   private
   
-	def these_params(model, *args)
-	  params.require(model).permit(*args)
-	end
+  def these_params(model, *args)
+    params.require(model).permit(*args)
+  end
 end
