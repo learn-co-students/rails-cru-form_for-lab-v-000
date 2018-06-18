@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
-  resource 'artist', except: ['show', 'create']
+  resource :artist, :genre, except: ['show', 'create']
   get 'artists/:id' , to: 'artists#show'
   post 'artists' , to: 'artists#create', as: 'artists'
+
    # get 'artists/new', to: 'artists#new', as: 'new_artist'
    # get 'artists/:id/edit' , to: 'artists#edit', as: 'edit_artist'
    # patch 'artist', to: 'artists#update'
+
+   get 'genres/:id' , to: 'genres#show'
+   post 'genres' , to: 'genres#create', as: 'genres'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
