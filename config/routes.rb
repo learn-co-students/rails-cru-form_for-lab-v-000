@@ -11,6 +11,11 @@ Rails.application.routes.draw do
    get 'genres/:id' , to: 'genres#show'
    post 'genres' , to: 'genres#create', as: 'genres'
 
+    get 'songs/:id' , to: 'songs#show', as: 'song'
+   # post 'songs' , to: 'songs#create', as: 'songs'
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
