@@ -11,22 +11,22 @@ class GenresController < ApplicationController
   end
 
   def edit
-    @genre = set_student
+    @genre = set_genre
   end
 
   def show
-    @genre = set_student
+    @genre = set_genre
   end
 
   def update
-    @genre = set_student
+    @genre = set_genre
     @genre.update(strong_params(params[:genre]) )
   end
 
 
    private
 
-    def set_student
+    def set_genre
       Genre.find_by(params[:id])
     end
 

@@ -1,17 +1,22 @@
 Rails.application.routes.draw do
 
-  resource :artist, :genre, except: ['show', 'create']
-  get 'artists/:id' , to: 'artists#show'
+  #resource :artist, except: [:show, :create,:destroy]
+  get 'artists/new', to: 'artists#new', as: 'new_artist'
+  get 'artists/:id' , to: 'artists#show', as: 'artist'
+  get 'artists/:id/edit' , to: 'artists#edit', as: 'edit_artist'
   post 'artists' , to: 'artists#create', as: 'artists'
+  patch 'artists/:id', to: 'artists#update'
 
-   # get 'artists/new', to: 'artists#new', as: 'new_artist'
-   # get 'artists/:id/edit' , to: 'artists#edit', as: 'edit_artist'
-   # patch 'artist', to: 'artists#update'
-
-   get 'genres/:id' , to: 'genres#show'
+   get 'genres/new', to: 'genres#new', as: 'new_genre'
+   get 'genres/:id/edit' , to: 'genres#edit', as: 'edit_genre'
+   get '/genres/:id' , to: 'genres#show', as: 'genre'
    post 'genres' , to: 'genres#create', as: 'genres'
+   patch 'genres/:id', to: 'genres#update'
 
-    get 'songs/:id' , to: 'songs#show', as: 'song'
+
+   get '/songs/new', to: 'songs#new', as: :new_song
+   get '/songs/:id' , to: 'songs#show', as: :song
+   post '/songs', to: 'songs#create', as: :songs
    # post 'songs' , to: 'songs#create', as: 'songs'
 
 

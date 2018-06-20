@@ -13,22 +13,22 @@ class ArtistsController < ApplicationController
    end
 
    def edit
-     @artist = set_student
+     @artist = set_artist
    end
 
    def show
-     @artist = set_student
+     @artist = set_artist
    end
 
    def update
-     @artist = set_student
+     @artist = set_artist
      @artist.update(strong_params(params[:artist]) )
    end
 
 
     private
 
-     def set_student
+     def set_artist
        Artist.find_by(params[:id])
      end
 
