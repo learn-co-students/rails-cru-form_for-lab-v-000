@@ -10,10 +10,12 @@ class ArtistsController < ApplicationController
 
    def new
    @artist = Artist.new
+   render :form
    end
 
    def edit
      @artist = set_artist
+     render :form
    end
 
    def show
@@ -22,7 +24,8 @@ class ArtistsController < ApplicationController
 
    def update
      @artist = set_artist
-     @artist.update(strong_params(params[:artist]) )
+     @artist.update(strong_params(:name,:bio) )
+     redirect_to artist_path(@artist)
    end
 
 

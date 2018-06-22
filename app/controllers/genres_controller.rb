@@ -8,10 +8,12 @@ class GenresController < ApplicationController
 
   def new
   @genre = Genre.new
+  render :form
   end
 
   def edit
     @genre = set_genre
+    render :form
   end
 
   def show
@@ -20,7 +22,8 @@ class GenresController < ApplicationController
 
   def update
     @genre = set_genre
-    @genre.update(strong_params(params[:genre]) )
+    @genre.update(strong_params(:name) )
+    redirect_to genre_path(@genre)
   end
 
 

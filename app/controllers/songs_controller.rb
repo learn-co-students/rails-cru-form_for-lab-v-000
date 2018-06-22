@@ -14,10 +14,12 @@
 
      def new
         @song = Song.new
+        render :form
      end
 
      def edit
        @song = set_song
+       render :form
      end
 
      def show
@@ -26,7 +28,7 @@
 
      def update
        @song = set_song
-       @song.update(strong_params(:name) )
+       @song.update(strong_params(:name, :artist_id, :genre_id) )
        redirect_to song_path(@song)
      end
 
