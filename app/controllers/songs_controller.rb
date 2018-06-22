@@ -1,9 +1,14 @@
  class SongsController < ApplicationController
 
+
+      def index
+        binding.pry
+      end
+
      def create
        @song =  Song.create(strong_params(:name, :artist_id, :genre_id))
        if @song.persisted?
-        render :show
+        redirect_to song_path(@song)
        end
      end
 
@@ -22,7 +27,7 @@
      def update
        @song = set_song
        @song.update(strong_params(:name) )
-       render :show
+       redirect_to song_path(@song)
      end
 
 
