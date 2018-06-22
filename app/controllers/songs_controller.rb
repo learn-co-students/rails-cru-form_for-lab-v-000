@@ -1,8 +1,8 @@
  class SongsController < ApplicationController
-
+   before_action :all_songs, only: :index
 
       def index
-        binding.pry
+        render :index
       end
 
      def create
@@ -41,6 +41,9 @@
      params.require(:song).permit(args)
        end
 
+       def all_songs
+         @songs = Song.all
+       end
 
 
  end
