@@ -6,14 +6,14 @@
       end
 
      def create
-       @song =  Song.create(strong_params(:name, :artist_id, :genre_id))
+        @song =  Song.create(strong_params(:name, :artist_id, :genre_id))
        if @song.persisted?
         redirect_to song_path(@song)
        end
      end
 
      def new
-     @song = Song.new
+        @song = Song.new
      end
 
      def edit
@@ -38,7 +38,7 @@
        end
 
        def strong_params(*args)
-     params.require(:song).permit(args)
+         params.require(:song).permit(args)
        end
 
        def all_songs
