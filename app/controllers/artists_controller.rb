@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-
+  before_action :set_artist, only: [:show, :edit, :update ]
 
    def create
      @artist =  Artist.create(strong_params(:name,:bio))
@@ -14,16 +14,13 @@ class ArtistsController < ApplicationController
    end
 
    def edit
-     @artist = set_artist
      render :form
    end
 
    def show
-     @artist = set_artist
    end
 
    def update
-     @artist = set_artist
      @artist.update(strong_params(:name,:bio) )
      redirect_to artist_path(@artist)
    end
@@ -32,7 +29,7 @@ class ArtistsController < ApplicationController
     private
 
      def set_artist
-       Artist.find_by(params[:id])
+      @artist = Artist.find_by(params[:id])
      end
 
      def strong_params(*args)

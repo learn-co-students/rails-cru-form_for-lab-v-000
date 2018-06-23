@@ -1,6 +1,6 @@
  class SongsController < ApplicationController
    before_action :all_songs, only: :index
-
+   before_action :set_song, only: [:show, :edit, :update ]
       def index
         render :index
       end
@@ -18,16 +18,13 @@
      end
 
      def edit
-       @song = set_song
        render :form
      end
 
      def show
-       @song = set_song
      end
 
      def update
-       @song = set_song
        @song.update(strong_params(:name, :artist_id, :genre_id) )
        redirect_to song_path(@song)
      end
@@ -36,7 +33,7 @@
   private
 
        def set_song
-         Song.find_by(params[:id])
+         @song = Song.find_by(params[:id])
        end
 
        def strong_params(*args)
