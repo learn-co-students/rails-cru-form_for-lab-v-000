@@ -55,5 +55,6 @@ Rails.application.routes.draw do
   #   end
 
   resources :artists
-  get '/artists/new', to: 'artists#new', as: 'new_artist'
+  # get '/artists/new', to: 'artists#new', as: 'new_artist'
+  # get '/artists/:id/edit', to: 'artists#edit', as: 'edit_artist'
 end
