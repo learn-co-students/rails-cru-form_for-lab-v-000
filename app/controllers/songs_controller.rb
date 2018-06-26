@@ -16,6 +16,16 @@ class SongsController < ApplicationController
     @song = Song.find_by(id: params[:id])
   end
 
+  def update
+    @song = Song.find_by(id: params[:id])
+    @song.update(song_param)
+    redirect_to song_path(@song)
+  end
+
+  def index
+    @songs = Song.all
+  end
+
   private
 
   def song_param
