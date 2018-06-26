@@ -53,4 +53,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resources :artists
+  get '/artists/new', to: 'artists#new', as: 'new_artist'
 end
