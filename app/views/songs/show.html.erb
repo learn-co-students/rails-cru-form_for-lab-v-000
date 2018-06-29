@@ -1,0 +1,3 @@
+<h1><%= @song.name %></h1>
+<div><%= link_to Artist.where(:id => @song.artist_id)[0].name, artist_path(@song.artist_id) %></div>
+<div><%= link_to Genre.where(:id => @song.genre_id)[0].name, genre_path(@song.genre_id) %></div>
