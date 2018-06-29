@@ -1,0 +1,9 @@
+<%= form_for(@artist) do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :bio %><br>
+  <%= f.text_area :bio %><br>
+
+  <%= f.submit "Update Artist"%>
+<% end %>
