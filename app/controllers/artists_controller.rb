@@ -19,9 +19,7 @@ class ArtistsController < ApplicationController
 
   def update
     @artist = find
-    binding.pry
     @artist.update(artist_params(:name, :bio))
-    binding.pry
     redirect_to artist_path(@artist)
   end
 
