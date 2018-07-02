@@ -1,0 +1,5 @@
+<%= form_for :genre, :url => url_for(:controller => 'genres', :action => 'create') do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit 'Create Genre' %>
+<% end %>
