@@ -1,3 +1,4 @@
 <h1><%=@song.name%></h1>
-<%binding.pry%>
-Genre: <h3><%=link_to @song.genre.name, genre_path(@song) %></h3>
+
+Artist: <h3><%=link_to @song.artist.name, artist_path(@song.artist) %></h3>
+Genre: <h3><%=link_to @song.genre.name, genre_path(@song.genre) %></h3>
