@@ -1,25 +1,28 @@
 class ArtistsController < ApplicationController
 
-  def index
-    @artists = Artist.all
+  def new
+    @artist = Artist.new
   end
 
   def create
-    @artist = Artist.new(artist_params)
+    @artist = Artist.new
     @artist.name = params[:artist][:name]
-    @artist.bio = parmas[:artist][:bio]
+    @artist.bio = params[:artist][:bio]
     @artist.save
 
-    redirect_to artists_path(@artist)
+    redirect_to artist_path(@artist)
   end
 
   def show
-
+    @artist = Artist.find(params[:id])
   end
 
-private
+  def edit
+    @artist = Artist.find(params[:id])
+  end
 
-  def artist_params
-    params.require(:artist).permit(:name, :bio)
+  def update
+    @artist = Artist.find(params[:id])
+    redirect_to artist_path(@artist)
   end
 end
