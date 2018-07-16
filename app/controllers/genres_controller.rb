@@ -3,6 +3,10 @@ class GenresController < ApplicationController
     @genre = Genre.new
   end
 
+  def index
+    @genres = Genre.all
+  end
+
   def create
     @genre = Genre.new
     @genre.name = params[:genre][:name]
