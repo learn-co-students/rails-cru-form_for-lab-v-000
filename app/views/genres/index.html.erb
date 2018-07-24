@@ -6,7 +6,7 @@
   <%genre.songs.each do |song|%>
   <p><%=link_to song.name, song_path(song)%></p>
   <ul>
-    <li><%=link_to song.artist.name, artist_path(song) %></li>
+    <li><%=link_to song.artist.name, artist_path(song.artist_id) %></li>
     </ul>
   <%end%>
 <%end%>
