@@ -2,9 +2,9 @@
 
 <%@songs.each do |song|%>
  
-  <h3><%= song.name %></h3>
-   <p><%= song.artist.name %></p>
-    <p><%= song.genre.name %></p>
+  <h3><%= link_to song.name, song_path(song) %></h3>
+   <p><%= link_to song.artist.name, artist_path(song) %></p>
+    <p><%= link_to song.genre.name, genre_path(song) %></p>
  
   
   <%end%>
