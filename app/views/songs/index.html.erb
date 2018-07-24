@@ -1,0 +1,10 @@
+<h1>Songs</h1>
+
+<%@songs.each do |song|%>
+ 
+  <h3><%= song.name %></h3>
+   <p><%= song.artist.name %></p>
+    <p><%= song.genre.name %></p>
+ 
+  
+  <%end%>
