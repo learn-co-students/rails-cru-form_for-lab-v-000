@@ -1,2 +1,13 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<% @songs.each do |t| %>
+  <h1><%= t.name %></h1>
+  <a href="<%= song_path(t.id) %>"></a>
+  
+  <% g = Genre.find(t.genre_id) %>
+  <a href="<%= genre_path(g) %>"></a>
+  
+  <% a = Artist.find(t.artist_id) %>
+  <a href="<%= artist_path(a) %>"></a>
+  
+  
+<% end %>
+
