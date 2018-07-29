@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :songs
-  resources :genres
-  resources :artists
+  resources :songs, only: [:index, :create, :update, :edit, :show, :new]
+  resources :genres, only: [:index, :create, :update, :edit, :show, :new]
+  resources :artists, only: [:index, :create, :update, :edit, :show, :new]
+  get '/navigate', to: 'artists#index', as: 'navigate'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
