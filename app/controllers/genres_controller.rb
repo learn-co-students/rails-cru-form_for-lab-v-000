@@ -23,6 +23,6 @@ class GenresController < ApplicationController
         @genre = Genre.find(params[:id])
         @genre.name = params[:genre][:name]
         @genre.save
-	    redirect_to artist_path(@genre)
+	    redirect_to genre_path(@genre)
     end
 end
