@@ -1,11 +1,14 @@
 class GenresController < ApplicationController
-  # create, update, and show
+  def index
+    @genres = Genre.all
+  end
+
   def new
-    @genre = Genre.find(params[:id])
+    @genre = Genre.new
   end
 
   def create
-    @genre = genre.create(genre_params)
+    @genre = Genre.create(genre_params(:name))
     redirect_to genre_path(@genre)
   end
 
@@ -19,14 +22,14 @@ class GenresController < ApplicationController
 
   def update
     @genre = Genre.find(params[:id])
-    @genre.update(genre_params)
+    @genre.update(genre_params(:name))
     redirect_to genre_path(@genre)
   end
 
   private
 
   def genre_params(*args)
-    params.require(:genre)
+    params.require(:genre).permit(:name)
   end
 
 end
