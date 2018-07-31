@@ -1,6 +1,8 @@
-<h1>song.name</h1>
 
-<h1><%= link_to @song.name, song_path(@song) %></h1>
-<div><%= link_to "hello", genre_path(@song.genre)%></div>
-<div><%= link_to @song.genre_id, song_path(@song) %></div>
+<h1>My Song</h1>
+<div><%= link_to "My song id", song_path(@song.id) %></div>
+
+<div><%= link_to "My song name", song_path(@song.name) %></div>
+<div><%= link_to "My Genre", genre_path(@song.genre_id)%></div>
+<div><%= link_to "My Artist", artist_path(@song.artist_id) %></div>
 
