@@ -30,6 +30,6 @@ end
 private
 
   def song_params
-    params.require(:artist).permit(:name, :artist_id,:genre_id)
+    params.require(:song).permit(:name, :artist_id,:genre_id)
   end
 end
