@@ -1,0 +1,12 @@
+<h1>My Song</h1>
+<h1>My edit</h1>
+<h1>My song name</h1>
+<p>@song.name</p>
+
+<h1>My Artist</h1>
+<p><%= @song.artist_id %></p>
+<a href="/artists/<%= @song.artist_id %>"><%= @song.artist.name %></a>
+
+<h1>My Genre</h1>
+<p><%= @song.genre_id %></p>
+<a href="/genres/<%= @song.genre_id %>"><%= @song.genre.name %></a>
