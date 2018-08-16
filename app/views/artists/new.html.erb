@@ -1,6 +1,14 @@
 
-artist[name]
+<%= form_for(@artist) do |f| %>
+  <%= label_tag "Name:" %>
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  
+  <%= label_tag "Biography" %>
+  <br>
+  <%= f.text_field :bio %>
+  <br>
 
-artist[bio]
-
-Create Artist
+  <%= f.submit %> 
+<% end %>
