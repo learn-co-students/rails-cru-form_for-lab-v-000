@@ -15,4 +15,7 @@ class ArtistsController < ApplicationController
   
   def 
   end
+  
+  def 
+  end
 end

@@ -15,4 +15,7 @@ class SongsController < ApplicationController
   
   def 
   end
+  
+  def 
+  end
 end
