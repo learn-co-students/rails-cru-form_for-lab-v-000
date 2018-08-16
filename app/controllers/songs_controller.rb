@@ -2,6 +2,10 @@
 class SongsController < ApplicationController
   before_action :find_song , only: [:show, :edit, :update]
   
+  def index
+    @songs = Song.all
+  end
+  
   def show 
   end
   
