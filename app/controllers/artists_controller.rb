@@ -1,6 +1,6 @@
 
 class ArtistsController < ApplicationController
-  before_action :find_artist , only: [:update, :show]
+  before_action :find_artist , only: [:show, :update]
   
   def show 
   end

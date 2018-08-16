@@ -1,6 +1,6 @@
 
 class GenresController < ApplicationController
-  before_action :find_genre , only: [:update, :show]
+  before_action :find_genre , only: [:show, :update]
   
   def show 
   end

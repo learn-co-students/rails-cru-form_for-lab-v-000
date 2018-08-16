@@ -1,6 +1,6 @@
 
 class SongsController < ApplicationController
-  before_action : , only: [:update, :show]
+  before_action : , only: [:show, :update]
   
   def create
   end
