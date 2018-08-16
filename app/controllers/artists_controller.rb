@@ -18,11 +18,12 @@ class ArtistsController < ApplicationController
   
   private
   
-  def find_artist
-    @artist = Artist.find(params[:id])
-  end
+    def find_artist
+      @artist = Artist.find(params[:id])
+    end
+    
+    def artist_params(*args)
+      params.require(:artist).permit(*args)
+    end
   
-  def artist_params(*args)
-    params.require(:artist).permit(*args)
-  end
 end
