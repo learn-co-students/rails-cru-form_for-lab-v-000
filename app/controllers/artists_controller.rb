@@ -1,6 +1,6 @@
 
 class ArtistsController < ApplicationController
-  before_action : , only: [:update, :show]
+  before_action :find_artist , only: [:update, :show]
   
   def create
   end
@@ -13,9 +13,11 @@ class ArtistsController < ApplicationController
   
   private
   
-  def 
+  def find_artist
+    @artist = Artist.find(params[:id])
   end
   
-  def 
+  def artist_params(*args)
+    params.require(:artist).permit(*args)
   end
 end
