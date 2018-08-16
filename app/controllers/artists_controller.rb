@@ -1,6 +1,6 @@
 
 class ArtistsController < ApplicationController
-  before_action :find_artist , only: [:show, :update]
+  before_action :find_artist , only: [:show, :edit, :update]
   
   def show 
   end
@@ -9,6 +9,9 @@ class ArtistsController < ApplicationController
     @artist = Artist.new(artist_params(:name, :bio))
     @artist.save 
     redirect_to artist_path(@artist)
+  end
+  
+  def edit 
   end
   
   def update
