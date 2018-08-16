@@ -1,21 +1,23 @@
 
 class SongsController < ApplicationController
-  before_action : , only: [:show, :update]
+  before_action :find_song , only: [:show, :update]
+  
+  def show 
+  end
   
   def create
+    @song = Song.new(song_params(:name, ))
   end
   
   def update
   end 
   
-  def show 
-  end 
-  
   private
   
-  def 
-  end
-  
-  def 
-  end
+    def 
+    end
+    
+    def 
+    end
+    
 end
