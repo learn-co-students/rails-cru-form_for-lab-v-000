@@ -16,14 +16,14 @@ class GenresController < ApplicationController
 	end
 
 	def create
-	  @genre = Genre.new(genre_params(:title, :description))
+	  @genre = Genre.new(genre_params)
 	  @genre.save
 	  redirect_to genre_path(@genre)
 	end
 
 	def update
 	  @genre = Genre.find(params[:id])
-	  @genre.update(genre_params(:title))
+	  @genre.update(genre_params)
 	  redirect_to genre_path(@genre)
 	end
 
@@ -34,8 +34,8 @@ class GenresController < ApplicationController
 	# this keeps `post_params` pretty dry while
 	# still allowing slightly different behavior
 	# depending on the controller action
-	def genre_params(*args)
-	  params.require(:genre).permit(*args)
+	def genre_params
+	  params.require(:genre).permit(:name)
 	end
 
 end

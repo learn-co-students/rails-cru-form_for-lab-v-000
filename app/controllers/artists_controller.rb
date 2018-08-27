@@ -16,14 +16,14 @@ class ArtistsController < ApplicationController
 	end
 
 	def create
-	  @artist = Artist.new(post_params(:title, :description))
+	  @artist = Artist.new(artist_params)
 	  @artist.save
 	  redirect_to artist_path(@artist)
 	end
 
 	def update
 	  @artist = Artist.find(params[:id])
-	  @artist.update(artist_params(:title))
+	  @artist.update(artist_params)
 	  redirect_to artist_path(@artist)
 	end
 
@@ -34,8 +34,8 @@ class ArtistsController < ApplicationController
 	# this keeps `post_params` pretty dry while
 	# still allowing slightly different behavior
 	# depending on the controller action
-	def artist_params(*args)
-	  params.require(:artist).permit(*args)
+	def artist_params
+	  params.require(:artist).permit(:name, :bio)
 	end
 
 end

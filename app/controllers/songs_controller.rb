@@ -16,14 +16,14 @@ class SongsController < ApplicationController
 	end
 
 	def create
-	  @song = Song.new(post_params(:title, :description))
+	  @song = Song.new(songs_params)
 	  @song.save
 	  redirect_to song_path(@song)
 	end
 
 	def update
 	  @song = Song.find(params[:id])
-	  @song.update(song_params(:title))
+	  @song.update(song_params)
 	  redirect_to song_path(@song)
 	end
 
@@ -34,8 +34,8 @@ class SongsController < ApplicationController
 	# this keeps `post_params` pretty dry while
 	# still allowing slightly different behavior
 	# depending on the controller action
-	def song_params(*args)
-	  params.require(:song).permit(*args)
+	def song_params
+	  params.require(:song).permit(:name, :artist_id, :genre_id)
 	end
 
 end
