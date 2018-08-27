@@ -1,8 +1,8 @@
 class CreateArtists < ActiveRecord::Migration
   def change
     create_table :artists do |t|
-      t.string :title
-      t.text :description
+      t.string :name
+      t.text :bio
 
       t.timestamps null: false
     end
