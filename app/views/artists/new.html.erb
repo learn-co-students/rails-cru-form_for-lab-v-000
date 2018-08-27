@@ -1,4 +1,5 @@
 <%= form_for(@artist) do |f| %>
+<<<<<<< HEAD
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -8,3 +9,13 @@
   <%= f.submit %>
 
 <% end %>
+=======
+  <label>Name:</label><br>
+  <%= f.text_field :name %><br>
+
+  <label>Bio</label><br>
+  <%= f.text_area :bio %><br>
+
+  <%= f.submit %>
+<% end %>
+>>>>>>> e302cf340e3215d1e2347951f277cf5154a2dcd7

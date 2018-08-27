@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Song: <%= @song.name %></h1>
 
 
@@ -16,3 +17,14 @@
     <strong>Not Available</strong>
   <% end %>
 </div>
+=======
+<h1><%= @song.name %></h1>
+
+<% if @song.artist %>
+<div><%= link_to @song.artist.name, artist_path(@artist) %></div>
+<% end %>
+
+<% if @song.genre %>
+<div><%= link_to @song.genre.name, genre_path(@genre) %></div>
+<% end %>
+>>>>>>> e302cf340e3215d1e2347951f277cf5154a2dcd7

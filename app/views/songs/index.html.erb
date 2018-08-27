@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2>List of Songs</h2>
 
 <ul>
@@ -9,3 +10,8 @@
   
   
 </ul>
+=======
+<% @songs.each do |song| %>
+  <p><%= link_to song.name, song_path(song) %></p>
+<% end %>
+>>>>>>> e302cf340e3215d1e2347951f277cf5154a2dcd7
