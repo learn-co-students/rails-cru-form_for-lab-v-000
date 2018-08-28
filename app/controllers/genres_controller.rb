@@ -29,11 +29,6 @@ class GenresController < ApplicationController
 
 	private
 
-
-	# We pass the permitted fields in as *args;
-	# this keeps `post_params` pretty dry while
-	# still allowing slightly different behavior
-	# depending on the controller action
 	def genre_params
 	  params.require(:genre).permit(:name)
 	end
