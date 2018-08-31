@@ -11,6 +11,10 @@
 
 You've been tasked with building a Rails app called **Beats by Rails**, the app will need to have three separate models:
 
+rails generate resource Artist name:string bio:text --no-test-framework
+rails generate resource Genre name:string --no-test-framework
+rails generate resource Song name:string artist_id:integer genre_id:integer --no-test-framework
+
 * Songs
 
 * Artists
