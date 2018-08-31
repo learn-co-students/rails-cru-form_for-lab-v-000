@@ -1,0 +1,2 @@
+class RemoveGenresController < ApplicationController
+end

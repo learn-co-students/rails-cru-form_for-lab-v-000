@@ -1,0 +1,2 @@
+class RemoveArtistsController < ApplicationController
+end

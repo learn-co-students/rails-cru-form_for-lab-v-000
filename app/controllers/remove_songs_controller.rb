@@ -1,0 +1,2 @@
+class RemoveSongsController < ApplicationController
+end
