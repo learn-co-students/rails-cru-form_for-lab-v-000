@@ -1,0 +1,8 @@
+<h3>New Artist</h3>
+
+<%= form_tag genres_path do %>
+  <label>Genre Name:</label><br>
+  <%= text_field_tag "genre[name]" %><br>
+
+  <%= submit_tag "Create Genre" %>
+<% end %>
