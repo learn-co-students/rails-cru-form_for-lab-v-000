@@ -33,3 +33,5 @@ private
 def song_params
   params.require(:song).permit(:name)
 end
+
+#change, to allow submit
