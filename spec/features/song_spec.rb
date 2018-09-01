@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'pry'
 describe 'navigate' do
   before do
     @artist = Artist.create(name: "My Artist", bio: "My artist bio")
