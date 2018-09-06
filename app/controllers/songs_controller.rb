@@ -3,7 +3,7 @@ require 'pry'
 class SongsController < ApplicationController
 
   def index
-    @song = Song.all
+    @songs = Song.all
   end
 
   def show
@@ -26,11 +26,11 @@ class SongsController < ApplicationController
 
   def update
     @song = Song.find(params[:id])
-    @song.update(params.require(:artist))
+    @song.update(song_params)
     redirect_to song_path(@song)
   end
 
-  def school_class_params
-    params.require(:song).permit(:title, :room_number)
+  def song_params
+    params.require(:song).permit(:name, :artist_id, :genre_id)
   end
 end

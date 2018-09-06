@@ -3,7 +3,7 @@ require 'pry'
 class GenresController < ApplicationController
 
   def index
-    @genre = Genre.all
+    @genres = Genre.all
   end
 
   def show
@@ -19,18 +19,18 @@ class GenresController < ApplicationController
   end
 
   def create
-    @genre = Genre.new(song_params)
+    @genre = Genre.new(genre_params)
     @genre.save
     redirect_to genre_path(@genre)
   end
 
   def update
     @genre = Genre.find(params[:id])
-    @genre.update(params.require(:artist))
+    @genre.update(genre_params)
     redirect_to genre_path(@genre)
   end
 
-  def school_class_params
-    params.require(:genre).permit(:title, :room_number)
+  def genre_params
+    params.require(:genre).permit(:name)
   end
 end
