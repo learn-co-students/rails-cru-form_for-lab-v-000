@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'genres/show'
-
-  get 'artists/show'
+  resources :songs
+  resources :genres
+  resources :artists
 
   # get 'songs/create'
   #
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   #
   # get 'songs/show'
 
-  resources :songs, except: [:destroy, :index]
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
