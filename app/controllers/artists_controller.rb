@@ -14,7 +14,7 @@ class ArtistsController < ApplicationController
         @artist.bio = params[:artist][:bio]
         @artist.save
         redirect_to artist_path(@artist)
-         # you dont have to put the id  
+         # you dont have to put the id but it directs to the show action  
     end
 
 
