@@ -1,7 +1,12 @@
 <h1>My Songs </h1>
 <% @songs.each do |song| %>
 <ul>
-  <li><%= song.name %></li>
+
+  <li><%= song.name %>
+
+      <p>Artist: <%= link_to song.artist.name, artist_path(song.artist)  %></p>
+      <p>Genre:<%= link_to song.genre.name, genre_path(song.genre) %></p>
+  </li><br>
 </ul>
 
 <%end%>
