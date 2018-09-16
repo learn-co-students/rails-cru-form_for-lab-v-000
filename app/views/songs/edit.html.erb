@@ -1,0 +1,6 @@
+<h1>Edit Song </h1><br>
+<%= form_for (@song) do |f| %>
+<label> Edit Name </label><br>
+<%=f.text_field :name %><br>
+<%= f.submit 'Update Song' %><br>
+<% end %>
