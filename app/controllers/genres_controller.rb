@@ -10,7 +10,7 @@ class GenresController < ApplicationController
 
   def create
     @genre = Genre.create(genre_params(:name))
-    redirect genre_path(@genre)
+    redirect_to genre_path(@genre)
   end
 
   def edit
@@ -20,7 +20,7 @@ class GenresController < ApplicationController
   def update
     set_genre
     @genre.update(genre_params(:name))
-    redirect genre_path(@genre)
+    redirect_to genre_path(@genre)
   end
 
   def show
