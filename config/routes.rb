@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'artists/new'
+
+  get 'artists/create'
+
+  get 'artists/edit'
+
+  get 'artists/update'
+
+  get 'artists/index'
+
+  get 'artists/show'
+
   resources :songs
   resources :genres
   resources :artists
