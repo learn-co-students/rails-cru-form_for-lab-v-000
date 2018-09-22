@@ -1,8 +1,15 @@
+require 'pry'
 class ArtistsController < ApplicationController
+
   def new
+    @artist = Artist.new
   end
 
   def create
+    #binding.pry
+    @artist = Artist.new(params.require(:artist).permit(:name, :bio))
+    @artist.save
+    redirect_to artist_path(@artist)
   end
 
   def edit
