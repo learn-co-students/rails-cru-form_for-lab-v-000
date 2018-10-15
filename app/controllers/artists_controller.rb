@@ -32,6 +32,4 @@ private
 		params.require(:artist) .permit(:name, :bio)
 	end
 
-#end
-
 end
