@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'pry'
 describe 'navigate' do
   before do
     @artist = Artist.create(name: "My Artist", bio: "My artist bio")
@@ -14,7 +14,6 @@ describe 'navigate' do
 
   it 'displays a link to the genre page' do 
     visit song_path(@song.id)
-
     expect(page).to have_link(@genre.name, href: genre_path(@genre))
   end
 
