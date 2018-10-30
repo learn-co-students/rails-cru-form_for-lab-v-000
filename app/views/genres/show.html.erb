@@ -1,0 +1,14 @@
+<h1>Genre Show Page</h1>
+<br></br>
+
+<h1>Name: <%= @genre.name %></h1><br>
+
+<p>Artists:</p>
+<ul><% @genre.artists.each do |artist| %></ul>
+        <li><%= artist.name %></li>
+    <% end %>
+
+<p>Songs:</p>
+<ul><% @genre.songs.each do |song| %></ul>
+        <li><%= song.name %></li>
+    <% end %>
