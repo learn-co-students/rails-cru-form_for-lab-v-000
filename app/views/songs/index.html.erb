@@ -1,0 +1,4 @@
+<h1>Here's a list of all our songs!</h1>
+<% @songs.each do |song| %>
+  <p><%= link_to "#{song.name}", song %></p>
+<% end %>
