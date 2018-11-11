@@ -1,0 +1,4 @@
+<h1>Welcome to the Artist index page, here are all of our artists:</h1>
+<% @artists.each do |artist| %>
+  <%= link_to "#{artist.name}", artist_path(artist) %>
+<% end %>
