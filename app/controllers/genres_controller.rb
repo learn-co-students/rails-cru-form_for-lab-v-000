@@ -9,9 +9,9 @@ class GenresController < ApplicationController
   end
 
   def create
-    @genre = Genre.create(gnere_params)
+    @genre = Genre.create(genre_params)
 
-    redirect_to artist_path(@genre)
+    redirect_to genre_path(@genre)
   end
 
   def edit
@@ -22,7 +22,7 @@ class GenresController < ApplicationController
     @genre = Genre.find(params[:id])
     @genre.update(genre_params)
     @genre.save
-    redirect_to artist_path(@genre)
+    redirect_to genre_path(@genre)
   end
 
   private
