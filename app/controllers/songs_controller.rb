@@ -1,11 +1,8 @@
-require 'pry'
-
-
 class SongsController < ApplicationController
 
 
   def index
-   @song = Song.all
+   @songs = Song.all
  end
 
 
@@ -16,7 +13,7 @@ class SongsController < ApplicationController
 
 
   def create
-    @song = Song.new(song_params(:name, :artist_id, :genre_id))
+    @song = Song.create(song_params(:name, :artist_id, :genre_id))
     @song.save
     redirect_to song_path(@song)
   end
@@ -35,6 +32,11 @@ class SongsController < ApplicationController
     @song.save
     redirect_to song_path(@song)
   end
+
+  def delete
+    @artist = Artist.find(params[:id])
+    @artist.clear
+  end 
 
 
   private

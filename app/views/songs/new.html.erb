@@ -1,6 +1,7 @@
-<%= form_for(@song) do|f| %>
+<h1>New Song</h1>
+<%= form_for(@song) do |f| %>
 <label>Song Name:</label><br>
-<% f.text_field :name %><br>
+<%= f.text_field :name %><br>
 
 <label>Song Genre:</label><br>
 <%= f.text_field :genre_id %><br>

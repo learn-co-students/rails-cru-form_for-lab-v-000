@@ -10,6 +10,16 @@ require 'rails_helper'
 #     end
 #   end
 # end
-RSpec.describe ArtistsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+
+
+describe 'delete' do
+  before do
+    @artist = Artist.create(name: "My Artist", bio: "My artist bio")
+  end
+
+  it 'deletes artist' do
+    @artist.delete
+
+  end
 end
