@@ -1,0 +1,8 @@
+<h1><%= @song.name %></h1>
+<%  if @song.genre_id != nil && @song.genre_id != "" %>
+<p><%= link_to "#{Genre.find_by(id: @song.genre_id).name}", genre_path(@song.genre_id) %></p>
+<% end %>
+
+<% if @song.artist_id != nil && @song.artist_id != "" %>
+<p><%= link_to "#{Artist.find_by(id: @song.artist_id).name}", artist_path(@song.artist_id) %></p>
+<% end %>
