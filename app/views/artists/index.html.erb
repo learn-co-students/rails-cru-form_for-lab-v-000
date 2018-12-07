@@ -1,0 +1,13 @@
+<% @artists.each do |artist| %>
+  <h1><%= artist.name %> </h1>
+  <p>Bio: <%= artist.bio %></p>
+  <h2>Songs:</h2>
+  <% if artist.songs.empty? %>
+    <p>No songs have been added for this artist yet!</p>
+  <% else %>
+  <% artist.songs.each do |a| %>
+      <p><strong><%= a.name %></strong></p>
+      <p>Genre: <%= a.genre.name %></p>
+    <% end %>
+  <% end %>
+<% end %>
