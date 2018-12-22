@@ -1,0 +1,10 @@
+<h1><%=@artist.name%></h1>
+<p><%=@artist.bio%></p><br><br>
+
+
+<%if !@artist.songs.empty?%>
+  <h3>Songs</h3>
+  <%@artist.songs.each do |song|%>
+    <%=link_to song.name, song_path(song) %> - <%=link_to song.genre.name, genre_path(song.genre) %><br>
+  <%end%>
+<%end%>
