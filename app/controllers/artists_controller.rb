@@ -1,20 +1,21 @@
 class ArtistsController < ApplicationController
   def new
-    @artist = Student.new
+    @artist = Artist.new
   end
 
   def create
-    @artist = Student.new(params.require(:artist))
+    byebug
+    @artist = Artist.new(params.require(:artist))
     @artist.save
     redirect_to artist_path(@artist)
   end
 
   def edit
-    @artist = Student.find(params[:id])
+    @artist = Artist.find(params[:id])
   end
 
   def update
-    @artist = Student.find(params[:id])
+    @artist = Artist.find(params[:id])
     @artist.update(params.require(:artist))
     redirect_to artist_path(@artist)
   end
@@ -24,6 +25,6 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    @artist = Student.find(params[:id])
+    @artist = Artist.find(params[:id])
   end
 end
