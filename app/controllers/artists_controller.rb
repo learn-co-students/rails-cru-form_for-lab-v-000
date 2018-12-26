@@ -4,14 +4,13 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    byebug
-    @artist = Artist.new(params.require(:artist))
+    @artist = Artist.new(artist_params)
     @artist.save
     redirect_to artist_path(@artist)
   end
 
   def edit
-    @artist = Artist.find(params[:id])
+    set_artist
   end
 
   def update
@@ -25,6 +24,17 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    set_artist
+  end
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_artist
     @artist = Artist.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def artist_params
+    params.require(:artist).permit(:name, :bio)
   end
 end
