@@ -1,2 +1,12 @@
-<h1>Songs#new</h1>
-<p>Find me in app/views/songs/new.html.erb</p>
+<%= form_for(@song) do |f| %>
+  <label>Song name:</label><br>
+  <%= f.text_field :name, :id => "name" %><br>
+
+  <label>Artist:</label><br>
+  <%= f.number_field :artist_id, :id => "song[artist_id]" %><br>
+
+  <label>Genre:</label><br>
+  <%= f.number_field :genre_id, :id => "song[genre_id]" %><br>
+  
+  <%= f.submit %>
+<% end %>
