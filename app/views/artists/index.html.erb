@@ -1,0 +1,7 @@
+<h1>Welcome to Beats By Rails</h1>
+<h2><u>Artists</u></h2>
+
+<% @artists.each do |artist| %>
+<h1><%= artist.name %></h1>
+<h2><%= artist.bio %></h2>
+<% end %>
