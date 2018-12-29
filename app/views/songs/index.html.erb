@@ -1,2 +1,3 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<% @songs.each do |song| %>
+  <p><%= song.name %></p>
+<% end %>
