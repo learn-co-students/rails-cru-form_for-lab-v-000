@@ -1,0 +1,7 @@
+<h1>Genre#index</h1>
+<p>Find me in app/views/genres/index.html.erb</p>
+
+<h1>All Genres</h1>
+<%= @genres.each do |genre| %>
+    <%= link_to genre.name, genre_path(genre) %>
+<% end %>

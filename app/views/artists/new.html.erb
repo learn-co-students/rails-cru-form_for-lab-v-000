@@ -1,0 +1,11 @@
+<h1>Artist#new</h1>
+<p>Find me in app/views/artists/new.html.erb</p>
+
+<h1>New Artist</h1>
+<%= form_for(@artist) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :bio %>
+    <%= f.text_area :bio %><br>
+    <%= f.submit %>
+<% end %>    
