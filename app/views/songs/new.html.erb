@@ -1,6 +1,6 @@
 <%= form_for(@song) do |f| %>
   <label>Song name:</label><br>
-  <%= f.text_field :name, :id => "name" %><br>
+  <%= text_field_tag :'song[name]' %><br>
 
   <label>Artist:</label><br>
   <%= f.text_field :artist_id, :id => "song[artist_id]" %><br>
