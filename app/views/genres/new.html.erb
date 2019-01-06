@@ -1,0 +1,6 @@
+<%= form_tag("/genres") do%>
+  <%=label_tag('genre[name]', "My genre name") %>
+  <%= text_field_tag('genre[name]') %>
+
+  <%= submit_tag "Create Genre" %>
+<% end %>

@@ -1,0 +1,5 @@
+<div> <% @artists.each do |artist| %>
+  <div> My Artist <%= link_to artist[name], artist_path(artist) %> </div>
+  <div> My artist bio<%= link_to artist[bio], artist_path(artist) %> </div>
+<% end %>
+</div>
