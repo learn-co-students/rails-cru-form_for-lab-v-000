@@ -1,16 +1,13 @@
 <%= form_tag("/songs") do %>
-  <%=label_tag('song[name]', "Name:") %>
-  <%= text_field_tag('song[name]') %><br>
+<%=label_tag('song[name]', "My song name:") %>
+<%= text_field_tag('song[name]') %><br>
 
-  <%= label_tag('song[name]', "My Artist") %>
-  <%= text_field_tag('song[name]') %><br> <br>
-  <%= label_tag('song[name]', "My artist bio") %>
-  <%= text_field_tag('song[name]') %><br> <br>
+  <%=label_tag('@artist.id')%>
+  <%=text_field_tag('song[artist_id]')%>
 
-
-
-  <%= label_tag('genre[name]', "Genre:") %>
-  <%= text_field_tag('genre[name]') %><br> <br>
+  <%=label_tag('song[genre_id]')%>
+  <%=text_field_tag('song[genre_id]')%>
 
   <%= submit_tag "Create Song" %>
-<% end %>
+  <% end %>
+f
