@@ -1,13 +1,10 @@
-<%= form_tag("/songs") do %>
-<%=label_tag('song[name]', "My song name:") %>
-<%= text_field_tag('song[name]') %><br>
+<%= form_for(@song) do |f| %>
+<label> My Song </label>
+  <%= f.text_field :name %>
+ <label> My Genre </label>
+  <%= f.text_field :genre_id %>
+  <label> My Art </label>
+  <%= f.text_field :artist_id %>
 
-  <%=label_tag('@artist.id')%>
-  <%=text_field_tag('song[artist_id]')%>
-
-  <%=label_tag('song[genre_id]')%>
-  <%=text_field_tag('song[genre_id]')%>
-
-  <%= submit_tag "Create Song" %>
-  <% end %>
-f
+  <%= f.submit "Create Song"%>
+<% end %>
