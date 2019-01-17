@@ -1,0 +1,4 @@
+<h1><%=@song.name%></h1>
+<%binding.pry%>
+<%= (link_to "My Artist", artist_path(@song.artist)) if @song.artist%>
+<%= (link_to "My Genre", genre_path(@song.genre)) if @song.genre%>
