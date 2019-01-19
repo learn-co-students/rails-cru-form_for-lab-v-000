@@ -1,0 +1,7 @@
+<form method = "post" action = "/artists/<%= @artist.id %>">
+  <input type = "hidden" name = "_method" value = "patch">
+
+<input type = "text" name = "artist[name]" value = "<%= @artist.name %>"><br>
+<textarea name = "artist[bio]" value = "<%= @artist.bio %>"><br>
+<input type = "submit" value = "Update Artist">
+</form>
