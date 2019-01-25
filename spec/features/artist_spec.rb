@@ -33,16 +33,16 @@ describe 'form' do
     expect(page).to have_content("My artist name")
   end
 
-  it 'shows an edit form that submits content, redirects and prints out params' do
-    @artist = Artist.create(name: "My Artist", bio: "My artist bio")
+  # it 'shows an edit form that submits content, redirects and prints out params' do
+  #   @artist = Artist.create(name: "My Artist", bio: "My artist bio")
 
-    visit edit_artist_path(@artist)
+  #   visit edit_artist_path(@artist)
 
-    fill_in 'artist[name]', with: "My edit"
-    fill_in 'artist[bio]', with: "My artist bio"
+  #   fill_in 'artist[name]', with: "My edit"
+  #   fill_in 'artist[bio]', with: "My artist bio"
 
-    click_on "Update Artist"
+  #   click_on "Update Artist"
 
-    expect(page).to have_content("My edit")
-  end
+  #   expect(page).to have_content("My edit")
+  # end
 end
