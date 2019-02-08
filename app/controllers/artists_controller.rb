@@ -5,6 +5,8 @@ class ArtistsController < ApplicationController
   end
 
   def create
+    @artist = Artist.new(artist_params)
+    @artist.save 
   end
 
   def show
