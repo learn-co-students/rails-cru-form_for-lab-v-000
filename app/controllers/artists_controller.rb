@@ -6,7 +6,8 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.new(artist_params)
-    @artist.save 
+    @artist.save
+    redirect_to artist_path(@artist)
   end
 
   def show
@@ -20,5 +21,11 @@ class ArtistsController < ApplicationController
   def edit
 
   end
+
+  private
+
+  def artist_params
+  params.require(:artist).permit(:name, :bio)
+
 
 end
