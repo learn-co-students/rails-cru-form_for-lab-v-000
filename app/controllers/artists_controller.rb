@@ -25,7 +25,7 @@ class ArtistsController < ApplicationController
   end
 
   def edit
-
+    @artist = Artist.find(params[:id])
   end
 
   private
