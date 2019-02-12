@@ -1,6 +1,3 @@
-class GenresController < ApplicationController
-
-
 
   class GenresController < ApplicationController
 
@@ -56,6 +53,5 @@ class GenresController < ApplicationController
       end
 
 
-  end
 
 end
