@@ -1,9 +1,5 @@
 class GenresController < ApplicationController
 
-
-
-  class GenresController < ApplicationController
-
     def index
       @genres = Genre.all
     end
@@ -56,6 +52,5 @@ class GenresController < ApplicationController
       end
 
 
-  end
 
 end

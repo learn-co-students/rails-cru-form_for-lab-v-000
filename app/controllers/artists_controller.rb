@@ -37,7 +37,7 @@ class ArtistsController < ApplicationController
     @artist.delete
     redirect_to artist_path
   end
-
+# cd desktop/flatiron-online/rails-cru-form_for-lab-v-000
   private
 
     def artist_params(*args)
