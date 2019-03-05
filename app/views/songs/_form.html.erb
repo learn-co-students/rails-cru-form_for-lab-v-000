@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="">
+    <%= form_for(@song) do |f| %>
+      <%= f.label 'Song Name:' %><br>
+      <%= f.text_field :name %><br>
+
+      <%= f.label 'Artist:' %><br>
+      <%= f.text_field :artist_id %><br>
+
+      <%= f.label 'Genre:' %><br>
+      <%= f.text_field :genre_id %><br>
+
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
