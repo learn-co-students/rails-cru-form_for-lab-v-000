@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -32,9 +31,8 @@ ActiveRecord::Schema.define(version: 20160101190129) do
     t.integer  "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_songs_on_artist_id"
+    t.index ["genre_id"], name: "index_songs_on_genre_id"
   end
-
-  add_index "songs", ["artist_id"], name: "index_songs_on_artist_id"
-  add_index "songs", ["genre_id"], name: "index_songs_on_genre_id"
 
 end
