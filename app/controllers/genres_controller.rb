@@ -1,4 +1,4 @@
-class ArtistsController < ApplicationController
+class GenresController < ApplicationController
 	def index
 		@genres = Genre.all
 	end
@@ -8,7 +8,7 @@ class ArtistsController < ApplicationController
 	end
 
 	def new
-		@artist = Genre.new
+		@genre = Genre.new
 	end
 
 	def create
