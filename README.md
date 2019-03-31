@@ -12,7 +12,7 @@
 You've been tasked with building a Rails app called **Beats by Rails**, the app will need to have three separate models:
 
 * Songs
-
+ 
 * Artists
 
 * Genres
