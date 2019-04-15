@@ -12,4 +12,8 @@ class SongsController < ApplicationController
         @song = Song.create(params.require[:song].permit(:name))
         redirect_to song_path(@song)
     end
+
+    def show
+        @song = Song.find(params[:id])
+    end
 end
