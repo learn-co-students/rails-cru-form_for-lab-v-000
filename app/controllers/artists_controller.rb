@@ -29,11 +29,6 @@ class ArtistsController < ApplicationController
 
 	private
 
-
-	# We pass the permitted fields in as *args;
-	# this keeps `student_params` pretty dry while
-	# still allowing slightly different behavior
-	# depending on the controller action
 	def artist_params(*args)
 	  params.require(:artist).permit(*args)
 	end
