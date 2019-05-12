@@ -1,0 +1,4 @@
+<h1><%= @song.name %></h1>
+<!-- Below code passes tests, but raises No Method Error in browser (undefined method 'name' for nil:NilClass) -->
+<h3>Artist: <%= link_to @song.artist.name, artist_path(@song.artist) %></h3>
+<h3>Genre: <%= link_to @song.genre.name, genre_path(@song.genre) %></h3>
