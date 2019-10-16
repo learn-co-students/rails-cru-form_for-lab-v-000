@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'navigate' do
+describe 'navigate genre pages' do
   before do
     @genre = Genre.create(name: "My Genre")
   end
@@ -16,7 +16,7 @@ describe 'navigate' do
   end
 end
 
-describe 'form' do
+describe 'genre form' do
   it 'shows a new form that submits content and redirects and prints out params' do
     visit new_genre_path
 
