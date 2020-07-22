@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
 
     def index
-        Song.all
+        @songs = Song.all
     end
 
     def show
@@ -13,6 +13,7 @@ class SongsController < ApplicationController
     end
 
     def create
+        # byebug
         @song = Song.new
         @song.name = params[:song][:name]
         @song.artist_id = params[:song][:artist_id]
@@ -20,6 +21,7 @@ class SongsController < ApplicationController
         @song.save
         redirect_to song_path(@song)
     end
+
     def edit
         @song = Song.find(params[:id])
     end
