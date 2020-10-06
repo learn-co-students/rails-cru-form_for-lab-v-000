@@ -50,7 +50,7 @@ table "songs"
 
 * You will need to use [strong params](https://github.com/learn-co-curriculum/strong-params-basics)
 
-* Don't worry about integrating drop down form elements for the genre and artist selections on the song form pages yet, simply enter in the ID in for each element
+* Don't worry about integrating drop down form elements for the genre and artist selections on the song form pages yet, simply enter in the ID for each element
 
 * You can use the `resource`, `model`, `migration`, and `controller` generators, but do not use the `scaffold` generator
 *Top Tip: Remember to use the --no-test-framework flag when generating models and controllers to avoid generating unnecessary testing frameworks!*
