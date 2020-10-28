@@ -7,3 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Artist.create([{name: "Emanuel", bio: "Brown Pants"}, {name: "Bob", bio: "Green Pants"}, {name: "Steve", bio: "Apple Pants"}]);
+Genre.create([{name: "Rap"}, {name: "Rock"}, {name: "EDM"}]);
+Song.create([{name: "99Problems"}, {name: "Fun Times"}, {name: "Handstand"}])
