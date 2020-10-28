@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Artist.create([{name: "Emanuel", bio: "Brown Pants"}, {name: "Bob", bio: "Green Pants"}, {name: "Steve", bio: "Apple Pants"}]);
