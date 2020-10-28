@@ -1,0 +1,10 @@
+<h3>Genre Form</h3>
+
+<%= form_tag genres_path do %>
+  <label>Genre Name:</label > 
+  <br> <%= text_field_tag :"genre[name]" %> 
+  <br> <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+<%= submit_tag "Create Genre" %>
+
+<% end %>
